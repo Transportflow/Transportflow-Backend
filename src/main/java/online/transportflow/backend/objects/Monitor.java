@@ -3,6 +3,6 @@ package online.transportflow.backend.objects;
 import java.util.List;
 
 public class Monitor {
-    private Stop stop;
+    private Location location;
     private List<Departure> departures;
 }

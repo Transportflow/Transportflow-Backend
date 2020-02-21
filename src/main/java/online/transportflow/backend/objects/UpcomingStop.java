@@ -3,11 +3,11 @@ package online.transportflow.backend.objects;
 import java.util.Date;
 import java.util.List;
 
-public class UpcomingStop extends Stop {
+public class UpcomingStop extends Location {
     private Date when;
 
-    public UpcomingStop(String stopId, String stopName, String stopCity, List<String> stopIcons, long latitude, long longitude, Date when) {
-        super(stopId, stopName, stopCity, stopIcons, latitude, longitude);
+    public UpcomingStop(String stopId, String stopName, String stopCity, List<String> stopIcons, Coordinates location, Date when) {
+        super(LocationType.STOP, stopId, stopName, stopCity, stopIcons, location);
         this.when = when;
     }
 
