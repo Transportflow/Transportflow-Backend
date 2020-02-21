@@ -1,15 +1,14 @@
 package online.transportflow.backend.providers;
 
-import online.transportflow.backend.objects.Coordinates;
-import online.transportflow.backend.objects.Monitor;
-import online.transportflow.backend.objects.Location;
-import online.transportflow.backend.objects.UpcomingStop;
+import online.transportflow.backend.objects.*;
 
 import java.util.Date;
 import java.util.List;
 
 public interface Provider {
+    String baseUrl = null;
     String regionName = null;
+    List<Product> products = null;
 
     /**
      * Returns a list of stops for a given query

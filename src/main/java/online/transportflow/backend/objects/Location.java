@@ -9,25 +9,19 @@ public class Location {
     private String id;
     private String name;
     private String city;
-    private List<String> stopIcons;
+    private List<Product> products;
+    private Number distance;
 
     private Coordinates coordinates;
 
-    public Location(LocationType type, @Nullable String id, String name, @Nullable String city, List<String> stopIcons, Coordinates coordinates) {
+    public Location(LocationType type, @Nullable String id, String name, @Nullable String city, List<Product> products, Coordinates coordinates, Number distance) {
         this.type = type;
         this.id = id;
         this.name = name;
         this.city = city;
-        this.stopIcons = stopIcons;
+        this.products = products;
         this.coordinates = coordinates;
-    }
-
-    public void setStopIcons(List<String> stopIcons) {
-        this.stopIcons = stopIcons;
-    }
-
-    public void addStopIcon(String icon) {
-        this.stopIcons.add(icon);
+        this.distance = distance;
     }
 
     public String getId() {
@@ -42,8 +36,8 @@ public class Location {
         return city;
     }
 
-    public List<String> getStopIcons() {
-        return stopIcons;
+    public List<Product> getProducts() {
+        return products;
     }
 
     public Coordinates getCoordinates() {
@@ -52,5 +46,9 @@ public class Location {
 
     public LocationType getType() {
         return type;
+    }
+
+    public Number getDistance() {
+        return distance;
     }
 }
