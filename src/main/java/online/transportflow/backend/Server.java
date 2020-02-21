@@ -1,9 +1,5 @@
 package online.transportflow.backend;
 
-import online.transportflow.backend.objects.Stop;
-import online.transportflow.backend.providers.Provider;
-import online.transportflow.backend.providers.BvgProvider;
-
 import static spark.Spark.*;
 
 public class Server {
@@ -33,11 +29,5 @@ public class Server {
         });
 
         get("/api/test", (req, res) -> req.attribute("provider"));
-
-        /*Provider bvg = new BvgProvider();
-
-        for (Stop s: bvg.searchStop("Steg", 10, true, false, false)) {
-            System.out.println(s.getStopName() + ", " + s.getStopCity());
-        }*/
     }
 }
