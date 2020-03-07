@@ -34,7 +34,4 @@ public interface Provider {
 
     Monitor getDepartures(String stopId, Date when, int duration);
     List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop);
-
-
-
 }

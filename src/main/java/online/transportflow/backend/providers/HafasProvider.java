@@ -93,7 +93,7 @@ public class HafasProvider implements Provider {
 
     private LocationType getType(JSONObject obj) {
         if (obj.getString("type").equals("location")) {
-            try  {
+            try {
                 // if location is no poi, poi is undefined
                 obj.getBoolean("poi");
                 return LocationType.POI;
@@ -106,28 +106,17 @@ public class HafasProvider implements Provider {
 
     @Override
     public Monitor getDepartures(String stopId, Date when, int duration) {
+        String response = HttpRequest.get(baseUrl +
+                "/stops/" + stopId + "/departures" +
+                "?duration=" + duration).body();
+
+        System.out.print(response);
+
         return null;
     }
 
     @Override
     public List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop) {
         return new ArrayList<>();
-    }
-
-    public void printResultsToConsole(List<Location> results) {
-        results.forEach((location -> {
-            System.out.print(location.getType().toString() + " | " + location.getName() + " | " + location.getCoordinates().getLatitude() + ", " + location.getCoordinates().getLongitude());
-            if (location.getDistance() != null) {
-                System.out.print(" | " + location.getDistance() + "m");
-            }
-            if (location.getProducts().size() > 0) {
-                System.out.print("\n + ");
-                location.getProducts().forEach((product -> {
-                    System.out.print(product.getName() + " + ");
-                }));
-                System.out.print("\n");
-            }
-            System.out.print("\n");
-        }));
     }
 }
