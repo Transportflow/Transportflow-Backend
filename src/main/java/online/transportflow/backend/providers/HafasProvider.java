@@ -18,7 +18,7 @@ public class HafasProvider implements Provider {
     private String regionName;
     private String language;
     private List<Product> products;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ssX");
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
 
     public HafasProvider(String baseUrl, String regionName, String language, List<Product> products) {
         this.baseUrl = baseUrl;
@@ -133,7 +133,7 @@ public class HafasProvider implements Provider {
                     remarks.add(new Remark(remarkType, jsonRemark.has("code") ? jsonRemark.getString("code") : null, jsonRemark.has("summary") ? jsonRemark.getString("summary") : null, jsonRemark.getString("text")));
                 }
             }
-            int delay = obj.get("delay") instanceof Number ? obj.getInt("delay") : 0;
+            int delay = obj.get("delay") instanceof Number ? obj.getInt("delay") / 60 : 0;
             String platform = obj.get("platform") instanceof String ? obj.getString("platform") : null;
             Boolean cancelled = obj.has("cancelled") && obj.getBoolean("cancelled");
 
