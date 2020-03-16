@@ -1,8 +1,8 @@
 package online.transportflow.backend.objects;
 
 public class Coordinates {
-    double latitude;
-    double longitude;
+    public double latitude;
+    public double longitude;
 
     public Coordinates(double latitude, double longitude) {
         this.latitude = latitude;

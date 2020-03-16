@@ -1,15 +1,17 @@
 package online.transportflow.backend.objects;
 
-public class Line {
-    private String id;
-    private String fahrtNr;
-    private String name;
-    private String mode;
-    private String product;
-    private String symbol;
-    private int nr;
+import org.jetbrains.annotations.Nullable;
 
-    public Line(String id, String fahrtNr, String name, String mode, String product, String symbol, int nr) {
+public class Line {
+    public String id;
+    public String fahrtNr;
+    public String name;
+    public String mode;
+    public Product product;
+    public String symbol;
+    public int nr;
+
+    public Line(String id, String fahrtNr, String name, String mode, Product product, @Nullable String symbol, int nr) {
         this.id = id;
         this.fahrtNr = fahrtNr;
         this.name = name;
@@ -35,7 +37,7 @@ public class Line {
         return mode;
     }
 
-    public String getProduct() {
+    public Product getProduct() {
         return product;
     }
 

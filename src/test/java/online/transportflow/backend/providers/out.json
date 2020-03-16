@@ -1,0 +1,4580 @@
+[
+  {
+    "tripId": "1|160|1|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T13:57:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "258",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78850",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie zwischen Spandau und Nauen auch den Ersatzverkehr mit Bussen. Abfahrt 07 und 37 ab Spandau.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-18T09:56:00+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": 420,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67611|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T13:58:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1372",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 120,
+    "platform": null
+  },
+  {
+    "tripId": "1|67457|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T13:59:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1481",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 60,
+    "platform": null
+  },
+  {
+    "tripId": "1|43128|4|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:02:00+01:00",
+    "direction": "S Spandau",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "521",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|43138|5|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:05:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "554",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67823|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T14:14:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "387",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 240,
+    "platform": null
+  },
+  {
+    "tripId": "1|67627|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:16:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1397",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|135|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:19:00+01:00",
+    "direction": "S Südkreuz",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "287",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78851",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie auch den Ersatzverkehr mit Bussen.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:30:00+01:00",
+        "modified": "2020-02-14T11:45:13+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": 0,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|67485|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:28:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1451",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 300,
+    "platform": null
+  },
+  {
+    "tripId": "1|43157|4|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:32:00+01:00",
+    "direction": "S Spandau",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "625",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67807|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T14:36:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "405",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|67608|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:37:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1423",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|67483|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:38:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1473",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|160|2|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:50:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "257",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78850",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie zwischen Spandau und Nauen auch den Ersatzverkehr mit Bussen. Abfahrt 07 und 37 ab Spandau.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-18T09:56:00+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": 0,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67628|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T14:56:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1369",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|43128|5|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:02:00+01:00",
+    "direction": "S Spandau",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "522",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|43138|6|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:05:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "555",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67458|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:07:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1446",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|67811|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T15:10:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "442",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|67630|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:16:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1394",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|151|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:18:00+01:00",
+    "direction": "S Südkreuz",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "280",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78851",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie auch den Ersatzverkehr mit Bussen.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:30:00+01:00",
+        "modified": "2020-02-14T11:45:13+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": 0,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|67466|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:23:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1452",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|43157|5|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:32:00+01:00",
+    "direction": "S Spandau",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "626",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67808|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T15:36:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "461",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|67626|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:37:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "487",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei (Falkensee, Finkenkrug Bhf - Falkensee, Bahnhof)"
+      },
+      {
+        "type": "hint",
+        "code": "o ",
+        "text": "weiter als 652 (Falkensee, Finkenkrug Bhf - Falkensee, Bahnhof)"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|67484|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:38:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1488",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|160|3|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:50:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "256",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78850",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie zwischen Spandau und Nauen auch den Ersatzverkehr mit Bussen. Abfahrt 07 und 37 ab Spandau.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-18T09:56:00+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": 0,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67600|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:56:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1365",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67486|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T15:58:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1482",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": 0,
+    "platform": null
+  },
+  {
+    "tripId": "1|43128|6|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:02:00+01:00",
+    "direction": "S Spandau",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "523",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|43138|7|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:05:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "556",
+      "name": "RB14",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "EV",
+        "text": "Ersatzverkehr"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67804|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T16:10:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "497",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|368|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:16:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "423",
+      "name": "RB14",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": 0,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67634|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:16:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1390",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|135|1|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:19:00+01:00",
+    "direction": "S Südkreuz",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "286",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78851",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie auch den Ersatzverkehr mit Bussen.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:30:00+01:00",
+        "modified": "2020-02-14T11:45:13+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|67460|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:23:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1463",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|44395|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:28:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "re2",
+      "fahrtNr": "62193",
+      "name": "RE2",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "odeg-ostdeutsche-eisenbahn-gmbh",
+        "name": "ODEG Ostdeutsche Eisenbahn GmbH"
+      },
+      "symbol": "RE",
+      "nr": 2,
+      "metro": false,
+      "express": true,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      },
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "on",
+        "text": "Fahrradmitnahme leicht gemacht: www.vbb.de/radimregio"
+      },
+      {
+        "id": "82035",
+        "type": "warning",
+        "summary": "Fahrtausfall einiger Züge",
+        "text": "Am 17.03. fallen 4 Züge der Linie RE2 zwischen Berlin und Nauen betriebsbedingt aus. Die betroffenen Züge entnehmen Sie bitte dem Link.\n<a href=\"https://www.odeg.de/sondermeldung\">Weitere Informationen</a>",
+        "priority": 100,
+        "category": 4,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-16T11:18:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-03-16T11:20:43+01:00"
+      }
+    ],
+    "delay": 0,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67809|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T16:36:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "516",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67610|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:37:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1421",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|166|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:41:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "240",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78850",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie zwischen Spandau und Nauen auch den Ersatzverkehr mit Bussen. Abfahrt 07 und 37 ab Spandau.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-18T09:56:00+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|274|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:44:00+01:00",
+    "direction": "S Flughafen Berlin-Schönefeld",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "663",
+      "name": "RB14",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|67459|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:47:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1441",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67631|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:56:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1368",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67453|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T16:58:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1480",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67805|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T17:10:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "546",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|363|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:10:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "526",
+      "name": "RB14",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67597|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:16:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1396",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|141|1|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:19:00+01:00",
+    "direction": "S Südkreuz",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "285",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78851",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie auch den Ersatzverkehr mit Bussen.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:30:00+01:00",
+        "modified": "2020-02-14T11:45:13+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|67455|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:23:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1458",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67810|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T17:36:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "558",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67604|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:37:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1400",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67481|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:38:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1487",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|166|1|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:41:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "239",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78850",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie zwischen Spandau und Nauen auch den Ersatzverkehr mit Bussen. Abfahrt 07 und 37 ab Spandau.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-18T09:56:00+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|248|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:44:00+01:00",
+    "direction": "S Flughafen Berlin-Schönefeld",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "587",
+      "name": "RB14",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|67629|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:56:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1367",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67451|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T17:58:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1477",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67820|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210366",
+      "name": "Falkensee, Finkenkrug/Ringstr.",
+      "location": {
+        "type": "location",
+        "id": "900210366",
+        "latitude": 52.568063,
+        "longitude": 13.049982
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": false
+      }
+    },
+    "when": "2020-03-16T18:10:00+01:00",
+    "direction": "Falkensee, Finkenkrug West",
+    "line": {
+      "type": "line",
+      "id": "654",
+      "fahrtNr": "580",
+      "name": "654",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 654,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|364|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:10:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "524",
+      "name": "RB14",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67602|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:16:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1395",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|135|2|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:19:00+01:00",
+    "direction": "S Südkreuz",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "284",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78851",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie auch den Ersatzverkehr mit Bussen.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:30:00+01:00",
+        "modified": "2020-02-14T11:45:13+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|44418|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:19:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "re2",
+      "fahrtNr": "62195",
+      "name": "RE2",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "odeg-ostdeutsche-eisenbahn-gmbh",
+        "name": "ODEG Ostdeutsche Eisenbahn GmbH"
+      },
+      "symbol": "RE",
+      "nr": 2,
+      "metro": false,
+      "express": true,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      },
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "on",
+        "text": "Fahrradmitnahme leicht gemacht: www.vbb.de/radimregio"
+      },
+      {
+        "id": "82035",
+        "type": "warning",
+        "summary": "Fahrtausfall einiger Züge",
+        "text": "Am 17.03. fallen 4 Züge der Linie RE2 zwischen Berlin und Nauen betriebsbedingt aus. Die betroffenen Züge entnehmen Sie bitte dem Link.\n<a href=\"https://www.odeg.de/sondermeldung\">Weitere Informationen</a>",
+        "priority": 100,
+        "category": 4,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-16T11:18:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-03-16T11:20:43+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|67452|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:23:00+01:00",
+    "direction": "Dallgow-Döberitz, Havelpark",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1460",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|67599|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:37:00+01:00",
+    "direction": "Falkensee, Bhf",
+    "line": {
+      "type": "line",
+      "id": "653",
+      "fahrtNr": "1425",
+      "name": "653",
+      "public": true,
+      "mode": "bus",
+      "product": "bus",
+      "operator": {
+        "type": "operator",
+        "id": "havelbus-verkehrsgesellschaft-mbh",
+        "name": "Havelbus Verkehrsgesellschaft mbH"
+      },
+      "symbol": null,
+      "nr": 653,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      }
+    ],
+    "delay": null,
+    "platform": null
+  },
+  {
+    "tripId": "1|166|2|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:41:00+01:00",
+    "direction": "Nauen, Bhf",
+    "line": {
+      "type": "line",
+      "id": "rb10",
+      "fahrtNr": "238",
+      "name": "RB10",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 10,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "78850",
+        "type": "warning",
+        "summary": "Hohe Auslastung",
+        "text": "Starke Nachfrage erwartet. Nutzen Sie zwischen Spandau und Nauen auch den Ersatzverkehr mit Bussen. Abfahrt 07 und 37 ab Spandau.",
+        "priority": 100,
+        "category": 5,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-02-18T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-18T09:56:00+01:00"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "1"
+  },
+  {
+    "tripId": "1|275|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:44:00+01:00",
+    "direction": "S Flughafen Berlin-Schönefeld",
+    "line": {
+      "type": "line",
+      "id": "rb14",
+      "fahrtNr": "659",
+      "name": "RB14",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "db-regio-ag",
+        "name": "DB Regio AG"
+      },
+      "symbol": "RB",
+      "nr": 14,
+      "metro": false,
+      "express": false,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "kf",
+        "text": "Fahrzeuggebundene Einstiegshilfe vorhanden"
+      },
+      {
+        "id": "80111",
+        "type": "warning",
+        "summary": "Bauarbeiten vom 18.03.2020 bis 22.03.2020 auf der Linie RB10, RB14",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten Fahrplanänderungen mit Zugausfällen und Ersatzverkehr. Bitte informieren Sie sich frühzeitig in der Reiseauskunft über Ihre Fahrmöglichkeiten.",
+        "priority": 100,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T00:00:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:15:51+01:00"
+      },
+      {
+        "id": "80109",
+        "type": "warning",
+        "summary": "Information.",
+        "text": "Vom 18.03.20 bis 22.03.20 kommt es auf der Linie RB10,RB14 zwischen Berlin-Spandau (S) und Nauen zu baubedingten FahrplanÃ¤nderungen mit ZugausfÃ¤llen und Ersatzverkehr. Bitte informieren Sie sich frÃ¼hzeitig in der Reiseauskunft Ã¼ber Ihre FahrmÃ¶glichkeiten.",
+        "priority": 50,
+        "category": null,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-15T07:58:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-02-26T08:06:10+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  },
+  {
+    "tripId": "1|44398|0|86|16032020",
+    "stop": {
+      "type": "stop",
+      "id": "900000210011",
+      "name": "Falkensee, Finkenkrug",
+      "location": {
+        "type": "location",
+        "id": "900210011",
+        "latitude": 52.569502,
+        "longitude": 13.05178
+      },
+      "products": {
+        "suburban": false,
+        "subway": false,
+        "tram": false,
+        "bus": true,
+        "ferry": false,
+        "express": false,
+        "regional": true
+      }
+    },
+    "when": "2020-03-16T18:49:00+01:00",
+    "direction": "S+U Berlin Hauptbahnhof (tief)",
+    "line": {
+      "type": "line",
+      "id": "re2",
+      "fahrtNr": "62196",
+      "name": "RE2",
+      "public": true,
+      "mode": "train",
+      "product": "regional",
+      "operator": {
+        "type": "operator",
+        "id": "odeg-ostdeutsche-eisenbahn-gmbh",
+        "name": "ODEG Ostdeutsche Eisenbahn GmbH"
+      },
+      "symbol": "RE",
+      "nr": 2,
+      "metro": false,
+      "express": true,
+      "night": false
+    },
+    "remarks": [
+      {
+        "type": "hint",
+        "code": "bf",
+        "text": "barrierefrei"
+      },
+      {
+        "type": "hint",
+        "code": "FB",
+        "text": "Fahrradmitnahme möglich"
+      },
+      {
+        "type": "hint",
+        "code": "on",
+        "text": "Fahrradmitnahme leicht gemacht: www.vbb.de/radimregio"
+      },
+      {
+        "id": "82035",
+        "type": "warning",
+        "summary": "Fahrtausfall einiger Züge",
+        "text": "Am 17.03. fallen 4 Züge der Linie RE2 zwischen Berlin und Nauen betriebsbedingt aus. Die betroffenen Züge entnehmen Sie bitte dem Link.\n<a href=\"https://www.odeg.de/sondermeldung\">Weitere Informationen</a>",
+        "priority": 100,
+        "category": 4,
+        "products": {
+          "suburban": false,
+          "subway": true,
+          "tram": false,
+          "bus": false,
+          "ferry": false,
+          "express": false,
+          "regional": false
+        },
+        "validFrom": "2020-03-16T11:18:00+01:00",
+        "validUntil": "2020-03-17T23:59:00+01:00",
+        "modified": "2020-03-16T11:20:43+01:00"
+      }
+    ],
+    "delay": null,
+    "platform": "2"
+  }
+]

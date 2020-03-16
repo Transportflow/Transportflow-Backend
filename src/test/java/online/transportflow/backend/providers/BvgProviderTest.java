@@ -3,6 +3,7 @@ package online.transportflow.backend.providers;
 import online.transportflow.backend.Utils;
 import online.transportflow.backend.objects.Coordinates;
 import online.transportflow.backend.objects.Location;
+import online.transportflow.backend.objects.Monitor;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -23,7 +24,7 @@ class BvgProviderTest {
     public void locationSearchByText() {
         BvgProvider bvg = new BvgProvider(BvgProvider.getProducts());
 
-        List<Location> results = bvg.searchLocation("Hauptbahnhof", 5, true, false, false);
+        List<Location> results = bvg.searchLocation("Finkenkrug Bhf", 5, true, false, false);
         Utils.printLocationsToConsole(results);
     }
 
@@ -31,6 +32,9 @@ class BvgProviderTest {
     public void departureMonitorTest() {
         BvgProvider bvg = new BvgProvider(BvgProvider.getProducts());
 
-        bvg.getDepartures("900000003201", new Date(), 20);
+        Date departure = new Date();
+        departure.setHours(18);
+
+        Monitor m = bvg.getDepartures("900000210011", departure, 300);
     }
 }

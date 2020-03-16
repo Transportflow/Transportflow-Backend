@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BvgProvider extends HafasProvider {
     public BvgProvider(List<Product> products) {
-        super("https://bvg.transportflow.online", "Berlin", products);
+        super("https://bvg.transportflow.online", "Berlin", "de", products);
     }
 
     public static List<Product> getProducts() {

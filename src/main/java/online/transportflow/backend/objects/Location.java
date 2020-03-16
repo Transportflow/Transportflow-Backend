@@ -1,6 +1,6 @@
 package online.transportflow.backend.objects;
 
-import com.sun.istack.internal.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 

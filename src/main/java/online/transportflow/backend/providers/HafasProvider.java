@@ -6,19 +6,25 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public class HafasProvider implements Provider {
     private String baseUrl;
     private String regionName;
+    private String language;
     private List<Product> products;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd'T'HH:mm:ssX");
 
-    public HafasProvider(String baseUrl, String regionName, List<Product> products) {
+    public HafasProvider(String baseUrl, String regionName, String language, List<Product> products) {
         this.baseUrl = baseUrl;
         this.regionName = regionName;
         this.products = products;
+        this.language = language;
     }
 
     @Override
@@ -28,7 +34,8 @@ public class HafasProvider implements Provider {
                 "&results=" + results +
                 "&stops=" + stops +
                 "&addresses=" + addresses +
-                "&poi=" + poi).body();
+                "&poi=" + poi +
+                "&language=" + language).body();
 
         return parseStopResponse(response);
     }
@@ -41,7 +48,8 @@ public class HafasProvider implements Provider {
                 "&distance=" + radius +
                 "&results=" + results +
                 "&stops=" + stops +
-                "&poi=" + poi).body();
+                "&poi=" + poi +
+                "&language=" + language).body();
 
         return parseStopResponse(response);
     }
@@ -50,43 +58,7 @@ public class HafasProvider implements Provider {
         JSONArray response = new JSONArray(responseString);
         List<Location> result = new ArrayList<>();
         for (int i = 0; i < response.length(); i++) {
-            JSONObject obj = response.getJSONObject(i);
-            LocationType type = getType(obj);
-            Coordinates coordinates;
-            List<Product> stopProducts = new ArrayList<>();
-            String id;
-            String name;
-            Number distance = null;
-
-            if (type == LocationType.STOP) {
-                JSONObject jsonLocation = obj.getJSONObject("location");
-                coordinates = new Coordinates(jsonLocation.getDouble("latitude"), jsonLocation.getDouble("longitude"));
-
-                try {
-                    distance = obj.getInt("distance");
-                } catch (Exception e) {
-                    // no distance to stop (nearby method no used)
-                }
-
-                JSONObject jsonProducts = obj.getJSONObject("products");
-                products.forEach((product -> {
-                    if (jsonProducts.getBoolean(product.getCode())) {
-                        stopProducts.add(product);
-                    }
-                }));
-            } else {
-                coordinates = new Coordinates(obj.getDouble("latitude"), obj.getDouble("longitude"));
-            }
-
-            if (type == LocationType.ADDRESS) {
-                id = null;
-                name = obj.getString("address");
-            } else {
-                id = obj.getString("id");
-                name = obj.getString("name");
-            }
-
-            result.add(new Location(type, id, name, regionName, stopProducts, coordinates, distance));
+            result.add(parseLocation(response.getJSONObject(i)));
         }
         return result;
     }
@@ -106,17 +78,116 @@ public class HafasProvider implements Provider {
 
     @Override
     public Monitor getDepartures(String stopId, Date when, int duration) {
-        String response = HttpRequest.get(baseUrl +
+        long formattedDate = when.getTime() / 1000;
+        String res = HttpRequest.get(baseUrl +
                 "/stops/" + stopId + "/departures" +
-                "?duration=" + duration).body();
+                "?duration=" + duration +
+                "&when=" + formattedDate +
+                "&language=" + language).body();
+        List<Departure> result = new ArrayList<>();
 
-        System.out.print(response);
+        JSONArray response = new JSONArray(res);
 
-        return null;
+        for (int i = 0; i < response.length(); i++) {
+            JSONObject obj = response.getJSONObject(i);
+
+            String tripId = obj.getString("tripId");
+            Location location = parseLocation(obj.getJSONObject("stop"));
+            Date departureTime = null;
+            try {
+                String departureString = obj.get("when") instanceof String ? obj.getString("when") : null;
+                if (departureString == null) {
+                    departureString = obj.getString("scheduledWhen");
+                }
+                departureTime = dateFormat.parse(departureString);
+            } catch (ParseException e) {
+                System.out.println(obj.getString("when"));
+                e.printStackTrace();
+            }
+            String direction = obj.getString("direction");
+            JSONObject lineObject = obj.getJSONObject("line");
+            final Product[] lineProduct = new Product[1];
+            products.forEach(product -> {
+                if (product.code.equals(lineObject.getString("product")))
+                    lineProduct[0] = product;
+            });
+            Line line = new Line(lineObject.getString("id"),
+                    lineObject.getString("fahrtNr"),
+                    lineObject.getString("name"),
+                    lineObject.getString("mode"),
+                    lineProduct[0],
+                    lineObject.has("symbol") ? lineObject.get("symbol").toString() : null,
+                    lineObject.getInt("nr"));
+            JSONArray jsonRemarks = obj.getJSONArray("remarks");
+            ArrayList<Remark> remarks = new ArrayList<>();
+            if (jsonRemarks != null) {
+                for (int v = 0; v < jsonRemarks.length(); v++) {
+                    JSONObject jsonRemark = jsonRemarks.getJSONObject(v);
+
+                    RemarkType remarkType = RemarkType.OTHER;
+                    if (jsonRemark.getString("type").equals("hint"))
+                        remarkType = RemarkType.HINT;
+                    else if (jsonRemark.getString("type").equals("warning"))
+                        remarkType = RemarkType.WARNING;
+
+                    remarks.add(new Remark(remarkType, jsonRemark.has("code") ? jsonRemark.getString("code") : null, jsonRemark.has("summary") ? jsonRemark.getString("summary") : null, jsonRemark.getString("text")));
+                }
+            }
+            int delay = obj.get("delay") instanceof Number ? obj.getInt("delay") : 0;
+            String platform = obj.get("platform") instanceof String ? obj.getString("platform") : null;
+            Boolean cancelled = obj.has("cancelled") && obj.getBoolean("cancelled");
+
+            result.add(new Departure(tripId, location, departureTime, direction, line, remarks, delay, platform, cancelled));
+        }
+
+        Monitor monitor = new Monitor();
+        monitor.departures = result;
+        monitor.location = result.get(0).stop;
+
+        return monitor;
     }
 
     @Override
     public List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop) {
         return new ArrayList<>();
+    }
+
+    private Location parseLocation(JSONObject obj) {
+        LocationType type = getType(obj);
+        Coordinates coordinates;
+        List<Product> stopProducts = new ArrayList<>();
+        String id;
+        String name;
+        Number distance = null;
+
+        if (type == LocationType.STOP) {
+            JSONObject jsonLocation = obj.getJSONObject("location");
+            coordinates = new Coordinates(jsonLocation.getDouble("latitude"), jsonLocation.getDouble("longitude"));
+
+            try {
+                distance = obj.getInt("distance");
+            } catch (Exception e) {
+                // no distance to stop (nearby method no used)
+            }
+
+            JSONObject jsonProducts = obj.getJSONObject("products");
+            products.forEach((product -> {
+                if (jsonProducts.getBoolean(product.getCode())) {
+                    stopProducts.add(product);
+                }
+            }));
+        } else {
+            coordinates = new Coordinates(obj.getDouble("latitude"), obj.getDouble("longitude"));
+        }
+
+        if (type == LocationType.ADDRESS) {
+            id = null;
+            name = obj.getString("address");
+        } else {
+            id = obj.getString("id");
+            name = obj.getString("name");
+        }
+
+        return new Location(type, id, name, regionName, stopProducts, coordinates, distance);
     }
 }
