@@ -13,6 +13,8 @@ public class Departure {
     public int delay;
     public String platform;
     public Boolean cancelled;
+    public String arrivalTimeRelative;
+    public String arrivalTime;
 
     public Departure(String tripId, Location stop, Date when, String direction, Line line, List<Remark> remarks, int delay, String platform, Boolean cancelled) {
         this.tripId = tripId;
@@ -24,5 +26,13 @@ public class Departure {
         this.delay = delay;
         this.platform = platform;
         this.cancelled = cancelled;
+
+        Date currentDate = new Date();
+        long arrivalTimeRelativeRaw = (when.getTime() - currentDate.getTime()) / 60000;
+        if (arrivalTimeRelativeRaw < 60)
+            arrivalTimeRelative = arrivalTimeRelativeRaw + "'";
+        else
+            arrivalTimeRelative = arrivalTimeRelativeRaw / 60 + "h";
+        arrivalTime = when.getHours() + ":" + when.getMinutes();
     }
 }
