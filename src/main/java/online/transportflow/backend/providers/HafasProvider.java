@@ -11,7 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 public class HafasProvider implements Provider {
     private String baseUrl;
@@ -29,6 +28,10 @@ public class HafasProvider implements Provider {
 
     @Override
     public List<Location> searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
+        if (!stops && !addresses && !poi) {
+            stops = true;
+        }
+
         String response = HttpRequest.get(baseUrl +
                 "/locations?query=" + query.replaceAll(" ", "-") +
                 "&results=" + results +
@@ -42,6 +45,10 @@ public class HafasProvider implements Provider {
 
     @Override
     public List<Location> searchLocation(Coordinates coordinates, int radius, int results, boolean stops, boolean poi) {
+        if (!stops && !poi) {
+            stops = true;
+        }
+
         String response = HttpRequest.get(baseUrl +
                 "/stops/nearby?latitude=" + coordinates.getLatitude() +
                 "&longitude=" + coordinates.getLongitude() +
