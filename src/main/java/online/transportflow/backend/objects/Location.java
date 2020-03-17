@@ -8,17 +8,17 @@ public class Location {
     private LocationType type;
     private String id;
     private String name;
-    private String city;
+    private String regionName;
     private List<Product> products;
     private Number distance;
 
     private Coordinates coordinates;
 
-    public Location(LocationType type, @Nullable String id, String name, @Nullable String city, List<Product> products, Coordinates coordinates, Number distance) {
+    public Location(LocationType type, @Nullable String id, String name, @Nullable String regionName, List<Product> products, Coordinates coordinates, Number distance) {
         this.type = type;
         this.id = id;
         this.name = name;
-        this.city = city;
+        this.regionName = regionName;
         this.products = products;
         this.coordinates = coordinates;
         this.distance = distance;
@@ -32,8 +32,8 @@ public class Location {
         return name;
     }
 
-    public String getCity() {
-        return city;
+    public String getRegionName() {
+        return regionName;
     }
 
     public List<Product> getProducts() {
