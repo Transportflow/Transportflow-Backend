@@ -73,6 +73,33 @@ public class Server {
 
             return new Gson().toJson(loc);
         });
+
+        get("/:region/nearby", (req, res) -> {
+            Provider provider = req.attribute("provider");
+
+            Double latitude = null;
+            Double longitude = null;
+            try {
+                latitude = Double.parseDouble(req.queryParams("latitude"));
+                longitude = Double.parseDouble(req.queryParams("longitude"));
+            } catch (Exception e) {
+                halt(400, "Latitude or longitude not specified/not numbers");
+            }
+
+            if (latitude == null || longitude == null) {
+                return null;
+            }
+
+            List<Location> loc = provider.searchLocation(new Coordinates(latitude, longitude),
+                    req.queryParams("radius") != null ? Integer.parseInt(req.queryParams("radius")) : 250,
+                    req.queryParams("results") != null ? Integer.parseInt(req.queryParams("results")) : 5,
+                    req.queryParams("stops") != null && req.queryParams("stops").equals("true"),
+                    req.queryParams("pois") != null && req.queryParams("pois").equals("true"));
+
+            return new Gson().toJson(loc);
+        });
+    }
+
     static Provider getProvider(Request req) throws Exception {
         if (req.params("region") == null) {
             throw new Exception("No region specified");
