@@ -160,6 +160,12 @@ public class HafasProvider implements Provider {
 
     @Override
     public List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop) {
+        /*String res = HttpRequest.get(baseUrl +
+                "/stops/" + stopId + "/departures" +
+                "?duration=" + duration +
+                "&when=" + formattedDate +
+                "&language=" + language).body();*/
+
         return new ArrayList<>();
     }
 

@@ -4,12 +4,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import online.transportflow.backend.objects.Coordinates;
 import online.transportflow.backend.objects.Location;
+import online.transportflow.backend.objects.Monitor;
 import online.transportflow.backend.providers.BvgProvider;
 import online.transportflow.backend.providers.Provider;
 import spark.Request;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Date;
 import java.util.List;
 
 import static spark.Spark.*;
@@ -97,6 +98,17 @@ public class Server {
                     req.queryParams("pois") != null && req.queryParams("pois").equals("true"));
 
             return new Gson().toJson(loc);
+        });
+
+        get("/:region/departures/:stopId", (req, res) -> {
+            Provider provider = req.attribute("provider");
+            Date when = new Date();
+            if (req.queryParams("when") != null) {
+                when.setTime(Long.parseLong(req.queryParams("when")));
+            }
+
+            Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
+            return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
         });
     }
 

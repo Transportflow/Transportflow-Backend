@@ -1,7 +1,11 @@
 package online.transportflow.backend.objects;
 
+import com.google.gson.annotations.Expose;
+
 public class Coordinates {
+    @Expose(serialize = true)
     public double latitude;
+    @Expose(serialize = true)
     public double longitude;
 
     public Coordinates(double latitude, double longitude) {
