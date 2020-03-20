@@ -14,7 +14,7 @@ class BvgProviderTest {
 
     @Test
     public void locationSearchByCoordinates() {
-        BvgProvider bvg = new BvgProvider(BvgProvider.getProducts());
+        BvgProvider bvg = new BvgProvider(BvgProvider.getProviderProducts());
 
         List<Location> results = bvg.searchLocation(new Coordinates(52.52595, 13.368928), 500, 5, true, false);
         Utils.printLocationsToConsole(results);
@@ -22,7 +22,7 @@ class BvgProviderTest {
 
     @Test
     public void locationSearchByText() {
-        BvgProvider bvg = new BvgProvider(BvgProvider.getProducts());
+        BvgProvider bvg = new BvgProvider(BvgProvider.getProviderProducts());
 
         List<Location> results = bvg.searchLocation("Finkenkrug Bhf", 5, true, false, false);
         Utils.printLocationsToConsole(results);
@@ -30,7 +30,7 @@ class BvgProviderTest {
 
     @Test
     public void departureMonitorTest() {
-        BvgProvider bvg = new BvgProvider(BvgProvider.getProducts());
+        BvgProvider bvg = new BvgProvider(BvgProvider.getProviderProducts());
 
         Date departure = new Date();
         departure.setHours(18);

@@ -1,45 +1,62 @@
 package online.transportflow.backend;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import online.transportflow.backend.objects.Coordinates;
 import online.transportflow.backend.objects.Location;
 import online.transportflow.backend.providers.BvgProvider;
 import online.transportflow.backend.providers.Provider;
+import spark.Request;
 
-import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static spark.Spark.*;
 
 public class Server {
+
+    static List<Provider> providers = new ArrayList<>();
+
     public static void main(String... args) {
+        providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
+
         staticFiles.location("/public");
 
-        get("/hello", (req, res) -> "Transportflow API v0.1");
+        get("/providers", (req, res) -> {
+            res.type("application/json");
+            return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(providers);
+        });
 
-        before("/api/*", (req, res) -> {
-            if (req.queryParams("region") == null) {
-                halt(400, "No region specified");
-                return;
-            }
-
+        before("/:region/*", (req, res) -> {
             Provider provider = null;
-            switch (req.queryParams("region").toLowerCase()) {
-                case "berlin":
-                case "brandenburg":
-                    provider = new BvgProvider(BvgProvider.getProducts());
-                    break;
+            try {
+                provider = getProvider(req);
+            } catch (Exception e) {
+                halt(400, e.getMessage());
             }
-
-            if (provider == null) {
-                halt(400, "Region not valid");
+            if (provider == null)
                 return;
-            }
 
             res.type("application/json");
             req.attribute("provider", provider);
         });
 
-        get("/api/locations", (req, res) -> {
+        get("/:region", (req, res) -> {
+            Provider provider = null;
+            try {
+                provider = getProvider(req);
+            } catch (Exception e) {
+                halt(400, e.getMessage());
+            }
+            if (provider == null)
+                return null;
+
+            res.type("application/json");
+            return "{region: \"" + provider.getRegionName() + "\", products:" + new Gson().toJson(provider.getProducts()) + "}";
+        });
+
+        get("/:region/locations", (req, res) -> {
             Provider provider = req.attribute("provider");
 
             String query = req.queryParams("query");
@@ -56,5 +73,18 @@ public class Server {
 
             return new Gson().toJson(loc);
         });
+    static Provider getProvider(Request req) throws Exception {
+        if (req.params("region") == null) {
+            throw new Exception("No region specified");
+        }
+
+        Provider provider = providers.stream().filter(p -> p.getRegionName().toLowerCase().equals(req.params("region").toLowerCase()))
+                .findFirst().orElse(null);
+
+        if (provider == null) {
+            throw new Exception("Region not valid");
+        }
+
+        return provider;
     }
 }

@@ -1,6 +1,7 @@
 package online.transportflow.backend.providers;
 
 import com.github.kevinsawicki.http.HttpRequest;
+import com.google.gson.annotations.Expose;
 import online.transportflow.backend.objects.*;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,9 +15,12 @@ import java.util.List;
 
 public class HafasProvider implements Provider {
     private String baseUrl;
-    private String regionName;
+    @Expose(serialize = true)
+    public String regionName;
     private String language;
-    private List<Product> products;
+    @Expose(serialize = true)
+    public List<Product> products;
+    @Expose(serialize = false)
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
 
     public HafasProvider(String baseUrl, String regionName, String language, List<Product> products) {
@@ -157,6 +161,16 @@ public class HafasProvider implements Provider {
     @Override
     public List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop) {
         return new ArrayList<>();
+    }
+
+    @Override
+    public String getRegionName() {
+        return regionName;
+    }
+
+    @Override
+    public List<Product> getProducts() {
+        return products;
     }
 
     private Location parseLocation(JSONObject obj) {
