@@ -7,10 +7,10 @@ import java.util.List;
 
 public class BvgProvider extends HafasProvider {
     public BvgProvider(List<Product> products) {
-        super("https://bvg.transportflow.online", "Berlin/Brandenburg", "de", products);
+        super("https://bvg.transportflow.online", "Berlin", "de", products);
     }
 
-    public static List<Product> getProducts() {
+    public static List<Product> getProviderProducts() {
         List<Product> products = new ArrayList<>();
         products.add(new Product("suburban", "S-Bahn", "https://upload.wikimedia.org/wikipedia/commons/e/e7/S-Bahn-Logo.svg"));
         products.add(new Product("subway", "U-Bahn", "https://upload.wikimedia.org/wikipedia/commons/e/ee/U-Bahn_Berlin_logo.svg"));
