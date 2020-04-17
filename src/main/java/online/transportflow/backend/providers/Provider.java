@@ -8,6 +8,8 @@ import java.util.List;
 public interface Provider {
     String baseUrl = null;
     String regionName = null;
+    String image = null;
+    String textColor = null;
     List<Product> products = null;
 
     /**

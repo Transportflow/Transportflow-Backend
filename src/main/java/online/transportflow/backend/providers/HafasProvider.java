@@ -19,14 +19,21 @@ public class HafasProvider implements Provider {
     public String regionName;
     private String language;
     @Expose(serialize = true)
+    public String image;
+    @Expose(serialize = true)
+    public String textColor;
+
+    @Expose(serialize = true)
     public List<Product> products;
     @Expose(serialize = false)
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
 
-    public HafasProvider(String baseUrl, String regionName, String language, List<Product> products) {
+    public HafasProvider(String baseUrl, String regionName, String language, String image, String textColor, List<Product> products) {
         this.baseUrl = baseUrl;
         this.regionName = regionName;
+        this.textColor = textColor;
         this.products = products;
+        this.image = image;
         this.language = language;
     }
 
