@@ -6,6 +6,7 @@ import online.transportflow.backend.objects.Coordinates;
 import online.transportflow.backend.objects.Location;
 import online.transportflow.backend.objects.Monitor;
 import online.transportflow.backend.providers.BvgProvider;
+import online.transportflow.backend.providers.DvbProvider;
 import online.transportflow.backend.providers.Provider;
 import spark.Request;
 
@@ -21,8 +22,31 @@ public class Server {
 
     public static void main(String... args) {
         providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
+        providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
 
         staticFiles.location("/public");
+
+        options("/*",
+                (request, response) -> {
+
+                    String accessControlRequestHeaders = request
+                            .headers("Access-Control-Request-Headers");
+                    if (accessControlRequestHeaders != null) {
+                        response.header("Access-Control-Allow-Headers",
+                                accessControlRequestHeaders);
+                    }
+
+                    String accessControlRequestMethod = request
+                            .headers("Access-Control-Request-Method");
+                    if (accessControlRequestMethod != null) {
+                        response.header("Access-Control-Allow-Methods",
+                                accessControlRequestMethod);
+                    }
+
+                    return "OK";
+                });
+
+        before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
 
         get("/providers", (req, res) -> {
             res.type("application/json");
