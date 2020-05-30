@@ -1,8 +1,11 @@
 package online.transportflow.backend.providers;
 
 import com.github.kevinsawicki.http.HttpRequest;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
 import online.transportflow.backend.objects.*;
+import online.transportflow.backend.objects.location.Stop;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,7 +41,7 @@ public class HafasProvider implements Provider {
     }
 
     @Override
-    public List<Location> searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
+    public Stop[] searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
         if (!stops && !addresses && !poi) {
             stops = true;
         }
@@ -51,9 +54,11 @@ public class HafasProvider implements Provider {
                 "&poi=" + poi +
                 "&language=" + language).body();
 
-        return parseStopResponse(response);
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        return gson.fromJson(response, Stop[].class);
     }
 
+    /*
     @Override
     public List<Location> searchLocation(Coordinates coordinates, int radius, int results, boolean stops, boolean poi) {
         if (!stops && !poi) {
@@ -167,11 +172,11 @@ public class HafasProvider implements Provider {
 
     @Override
     public List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop) {
-        /*String res = HttpRequest.get(baseUrl +
+        String res = HttpRequest.get(baseUrl +
                 "/stops/" + stopId + "/departures" +
                 "?duration=" + duration +
                 "&when=" + formattedDate +
-                "&language=" + language).body();*/
+                "&language=" + language).body();
 
         return new ArrayList<>();
     }
@@ -224,4 +229,5 @@ public class HafasProvider implements Provider {
 
         return new Location(type, id, name, regionName, stopProducts, coordinates, distance);
     }
+    */
 }

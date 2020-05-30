@@ -2,9 +2,6 @@ package online.transportflow.backend;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import online.transportflow.backend.objects.Coordinates;
-import online.transportflow.backend.objects.Location;
-import online.transportflow.backend.objects.Monitor;
 import online.transportflow.backend.providers.BvgProvider;
 import online.transportflow.backend.providers.DvbProvider;
 import online.transportflow.backend.providers.Provider;
