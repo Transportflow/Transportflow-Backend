@@ -3,28 +3,16 @@ package online.transportflow.backend.objects;
 import com.google.gson.annotations.Expose;
 
 public class Product {
-    @Expose(serialize = true)
-    public String code;
-    @Expose(serialize = true)
-    public String name;
-    @Expose(serialize = true)
-    public String iconUrl;
+    @Expose
+    private String name;
+    @Expose
+    private String title;
+    @Expose
+    private String img;
 
-    public Product(String code, String name, String iconUrl) {
-        this.code = code;
+    public Product(String name, String title, String img) {
         this.name = name;
-        this.iconUrl = iconUrl;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getIconUrl() {
-        return iconUrl;
+        this.title = title;
+        this.img = img;
     }
 }
