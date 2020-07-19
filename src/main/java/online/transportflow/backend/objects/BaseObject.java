@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 
 public class BaseObject {
     @Expose
-    private String type;
+    public String type;
     @Expose
-    private String id;
+    public String id;
 }

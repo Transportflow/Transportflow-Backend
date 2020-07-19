@@ -19,4 +19,12 @@ public class Location {
     private double latitude;
     @Expose
     private double altitude;
+
+    public Location(String name, String address, double longitude, double latitude, double altitude) {
+        this.name = name;
+        this.address = address;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.altitude = altitude;
+    }
 }

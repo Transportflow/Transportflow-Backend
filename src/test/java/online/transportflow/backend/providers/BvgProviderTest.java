@@ -3,6 +3,8 @@ package online.transportflow.backend.providers;
 import online.transportflow.backend.objects.location.Stop;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 class BvgProviderTest {
     // !! Not actual unit test. Just testing the output from the providers !!
 
@@ -18,7 +20,7 @@ class BvgProviderTest {
     public void locationSearchByText() {
         BvgProvider bvg = new BvgProvider(BvgProvider.getProviderProducts());
 
-        Stop[] results = bvg.searchLocation("Finkenkrug Bhf", 5, true, false, false);
+        List<Stop> results = bvg.searchLocation("Finkenkrug Bhf", 5, true, false, false);
         for (Stop s : results) {
             System.out.println(s.getName());
         }

@@ -31,6 +31,16 @@ public class Stop extends BaseObject {
     @Expose
     private double distance;
 
+    public Stop(String id, String name, Location location, @Nullable List<Product> products, @Nullable Stop[] regions, @Nullable Stop[] stations, double distance) {
+        super.id = id;
+        this.name = name;
+        this.location = location;
+        this.products = products;
+        this.regions = regions;
+        this.stations = stations;
+        this.distance = distance;
+    }
+
     public String getName() {
         return name;
     }

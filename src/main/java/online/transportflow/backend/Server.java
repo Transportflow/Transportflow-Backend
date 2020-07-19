@@ -2,6 +2,7 @@ package online.transportflow.backend;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.providers.BvgProvider;
 import online.transportflow.backend.providers.DvbProvider;
 import online.transportflow.backend.providers.Provider;
@@ -50,7 +51,7 @@ public class Server {
             return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(providers);
         });
 
-        /*
+
         before("/:region/*", (req, res) -> {
             Provider provider = null;
             try {
@@ -88,7 +89,7 @@ public class Server {
                 return null;
             }
 
-            List<Location> loc = provider.searchLocation(query,
+            List<Stop> loc = provider.searchLocation(query,
                     req.queryParams("results") != null ? Integer.parseInt(req.queryParams("results")) : 7,
                     req.queryParams("stops") != null && req.queryParams("stops").equals("true"),
                     req.queryParams("address") != null && req.queryParams("address").equals("true"),
@@ -103,8 +104,8 @@ public class Server {
             Double latitude = null;
             Double longitude = null;
             try {
-                latitude = Double.parseDouble(req.queryParams("latitude"));
-                longitude = Double.parseDouble(req.queryParams("longitude"));
+                latitude = Double.parseDouble(req.queryParams("lat"));
+                longitude = Double.parseDouble(req.queryParams("lng"));
             } catch (Exception e) {
                 halt(400, "Latitude or longitude not specified/not numbers");
             }
@@ -113,7 +114,7 @@ public class Server {
                 return null;
             }
 
-            List<Location> loc = provider.searchLocation(new Coordinates(latitude, longitude),
+            List<Stop> loc = provider.searchLocation(latitude, longitude,
                     req.queryParams("radius") != null ? Integer.parseInt(req.queryParams("radius")) : 250,
                     req.queryParams("results") != null ? Integer.parseInt(req.queryParams("results")) : 5,
                     req.queryParams("stops") != null && req.queryParams("stops").equals("true"),
@@ -122,7 +123,7 @@ public class Server {
             return new Gson().toJson(loc);
         });
 
-        get("/:region/departures/:stopId", (req, res) -> {
+        /*get("/:region/departures/:stopId", (req, res) -> {
             Provider provider = req.attribute("provider");
             Date when = new Date();
             if (req.queryParams("when") != null) {
@@ -131,8 +132,7 @@ public class Server {
 
             Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
             return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
-        });
-    }*/
+        });*/
     }
 
     static Provider getProvider(Request req) throws Exception {

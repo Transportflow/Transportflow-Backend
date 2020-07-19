@@ -12,6 +12,16 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="matsim" />
+      <option name="name" value="MATSim release repository" />
+      <option name="url" value="http://dl.bintray.com/matsim/matsim" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="my-internal-site" />
+      <option name="name" value="my-internal-site" />
+      <option name="url" value="http://myserver/repo" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />

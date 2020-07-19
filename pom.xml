@@ -22,6 +22,14 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>matsim</id>
+            <name>MATSim release repository</name>
+            <url>http://dl.bintray.com/matsim/matsim</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>com.sparkjava</groupId>
@@ -32,6 +40,14 @@
             <groupId>com.github.kevinsawicki</groupId>
             <artifactId>http-request</artifactId>
             <version>6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>3.8.06</version>
+            <scope>system</scope>
+            <classifier>standalone</classifier>
+            <systemPath>${project.basedir}/lib/unirest-java-3.8.06-standalone.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
@@ -54,6 +70,11 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.5</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.matsim</groupId>
+            <artifactId>matsim</artifactId>
+            <version>12.0</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>

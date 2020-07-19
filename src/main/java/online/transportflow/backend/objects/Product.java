@@ -4,11 +4,11 @@ import com.google.gson.annotations.Expose;
 
 public class Product {
     @Expose
-    private String name;
+    public String name;
     @Expose
-    private String title;
+    public String title;
     @Expose
-    private String img;
+    public String img;
 
     public Product(String name, String title, String img) {
         this.name = name;

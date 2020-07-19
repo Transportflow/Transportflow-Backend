@@ -3,55 +3,18 @@ package online.transportflow.backend.providers;
 import com.github.kevinsawicki.http.HttpRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.annotations.Expose;
 import online.transportflow.backend.objects.*;
 import online.transportflow.backend.objects.location.Stop;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class HafasProvider implements Provider {
-    private String baseUrl;
-    @Expose(serialize = true)
-    public String regionName;
-    private String language;
-    @Expose(serialize = true)
-    public String image;
-    @Expose(serialize = true)
-    public String textColor;
-
-    @Expose(serialize = true)
-    public List<Product> products;
-    @Expose(serialize = false)
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
-
+public class HafasProvider extends GeneralProvider {
     public HafasProvider(String baseUrl, String regionName, String language, String image, String textColor, List<Product> products) {
-        this.baseUrl = baseUrl;
-        this.regionName = regionName;
-        this.textColor = textColor;
-        this.products = products;
-        this.image = image;
-        this.language = language;
+        super(baseUrl, regionName, language, image, textColor, products);
     }
 
     @Override
-    public String getRegionName() {
-        return regionName;
-    }
-
-    @Override
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    @Override
-    public Stop[] searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
+    public List<Stop> searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
         if (!stops && !addresses && !poi) {
             stops = true;
         }
@@ -65,7 +28,7 @@ public class HafasProvider implements Provider {
                 "&language=" + language).body();
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        return gson.fromJson(response, Stop[].class);
+        return List.of(gson.fromJson(response, Stop[].class));
     }
 
     /*
