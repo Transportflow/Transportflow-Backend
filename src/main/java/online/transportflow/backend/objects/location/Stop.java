@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * This may be a station, region or just a simple stop
+ * https://howtodoinjava.com/gson/custom-serialization-deserialization/
  */
 public class Stop extends BaseObject {
     @Expose

@@ -50,6 +50,7 @@ public class Server {
             return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(providers);
         });
 
+        /*
         before("/:region/*", (req, res) -> {
             Provider provider = null;
             try {
@@ -131,6 +132,7 @@ public class Server {
             Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
             return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
         });
+    }*/
     }
 
     static Provider getProvider(Request req) throws Exception {

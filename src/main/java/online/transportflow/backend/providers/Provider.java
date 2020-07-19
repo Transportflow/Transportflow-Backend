@@ -25,7 +25,7 @@ public interface Provider {
     Stop[] searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi);
 
 
-    /**
+    /*
      * Returns a list of stops for a radius around given coordinates
      *
      * @param coordinates  latitude & longitude for search
@@ -38,7 +38,8 @@ public interface Provider {
 
     Monitor getDepartures(String stopId, Date when, int duration);
     List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop);
+*/
 
     String getRegionName();
-    List<Product> getProducts();*/
+    List<Product> getProducts();
 }

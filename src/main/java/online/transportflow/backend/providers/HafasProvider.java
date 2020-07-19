@@ -41,6 +41,16 @@ public class HafasProvider implements Provider {
     }
 
     @Override
+    public String getRegionName() {
+        return regionName;
+    }
+
+    @Override
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    @Override
     public Stop[] searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
         if (!stops && !addresses && !poi) {
             stops = true;
@@ -179,16 +189,6 @@ public class HafasProvider implements Provider {
                 "&language=" + language).body();
 
         return new ArrayList<>();
-    }
-
-    @Override
-    public String getRegionName() {
-        return regionName;
-    }
-
-    @Override
-    public List<Product> getProducts() {
-        return products;
     }
 
     private Location parseLocation(JSONObject obj) {

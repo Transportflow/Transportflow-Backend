@@ -1,5 +1,7 @@
 package online.transportflow.backend.providers;
 
+import online.transportflow.backend.objects.Product;
+
 import java.util.ArrayList;
 import java.util.List;
 
