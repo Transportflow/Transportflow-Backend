@@ -5,6 +5,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import online.transportflow.backend.objects.*;
 import online.transportflow.backend.objects.location.Stop;
+import online.transportflow.backend.providers.HafasUtils.BvgStopDeserializer;
+import online.transportflow.backend.providers.HafasUtils.HafasStopDeserializer;
 
 import java.util.List;
 
@@ -27,51 +29,36 @@ public class HafasProvider extends GeneralProvider {
                 "&poi=" + poi +
                 "&language=" + language).body();
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Stop.class, new BvgStopDeserializer())
+                .setPrettyPrinting()
+                .create();
         return List.of(gson.fromJson(response, Stop[].class));
     }
 
-    /*
     @Override
-    public List<Location> searchLocation(Coordinates coordinates, int radius, int results, boolean stops, boolean poi) {
+    public List<Stop> searchLocation(double latitude, double longitude, int radius, int results, boolean stops, boolean poi) {
         if (!stops && !poi) {
             stops = true;
         }
 
         String response = HttpRequest.get(baseUrl +
-                "/stops/nearby?latitude=" + coordinates.getLatitude() +
-                "&longitude=" + coordinates.getLongitude() +
+                "/stops/nearby?latitude=" + latitude +
+                "&longitude=" + longitude +
                 "&distance=" + radius +
                 "&results=" + results +
                 "&stops=" + stops +
                 "&poi=" + poi +
                 "&language=" + language).body();
 
-        return parseStopResponse(response);
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Stop.class, new BvgStopDeserializer())
+                .setPrettyPrinting()
+                .create();
+        return List.of(gson.fromJson(response, Stop[].class));
     }
 
-    private List<Location> parseStopResponse(String responseString) {
-        JSONArray response = new JSONArray(responseString);
-        List<Location> result = new ArrayList<>();
-        for (int i = 0; i < response.length(); i++) {
-            result.add(parseLocation(response.getJSONObject(i)));
-        }
-        return result;
-    }
-
-    private LocationType getType(JSONObject obj) {
-        if (obj.getString("type").equals("location")) {
-            try {
-                // if location is no poi, poi is undefined
-                obj.getBoolean("poi");
-                return LocationType.POI;
-            } catch (JSONException e) {
-                return LocationType.ADDRESS;
-            }
-        }
-        return LocationType.STOP;
-    }
-
+/*
     @Override
     public Monitor getDepartures(String stopId, Date when, int duration) {
         long formattedDate = when.getTime() / 1000;

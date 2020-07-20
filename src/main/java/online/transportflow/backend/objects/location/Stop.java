@@ -17,7 +17,7 @@ public class Stop extends BaseObject {
     @Expose
     private Location location;
 
-    @Expose
+    @Expose(deserialize = false)
     @Nullable
     private List<Product> products;
 
@@ -39,6 +39,10 @@ public class Stop extends BaseObject {
         this.regions = regions;
         this.stations = stations;
         this.distance = distance;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     public String getName() {
