@@ -137,14 +137,14 @@ public class Server {
 
     static Provider getProvider(Request req) throws Exception {
         if (req.params("region") == null) {
-            throw new Exception("No region specified");
+            throw new Exception("Keine Region ausgewählt.");
         }
 
         Provider provider = providers.stream().filter(p -> p.getRegionName().toLowerCase().equals(req.params("region").toLowerCase()))
                 .findFirst().orElse(null);
 
         if (provider == null) {
-            throw new Exception("Region not valid");
+            throw new Exception("Aktuell gewählte Region nicht verfügbar.");
         }
 
         return provider;
