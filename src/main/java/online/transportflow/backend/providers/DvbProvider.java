@@ -59,7 +59,7 @@ public class DvbProvider extends GeneralProvider {
                 .field("query", query)
                 .field("limit", String.valueOf(results))
                 .field("stopsOnly", String.valueOf(!addresses && !poi))
-                .field("regionalOnly", String.valueOf(false))
+                .field("regionalOnly", String.valueOf(true))
                 .asJson();
         try {
             JSONArray res = new JsonNode(response.getBody().getObject().get("Points").toString()).getArray();
@@ -73,7 +73,7 @@ public class DvbProvider extends GeneralProvider {
                         getStopProdcuts(parts[0]),
                         null,
                         null,
-                        0);
+                        Integer.parseInt(parts[6]));
                 finalStops.add(s);
             });
             return finalStops;
@@ -88,7 +88,8 @@ public class DvbProvider extends GeneralProvider {
         HttpResponse<JsonNode> response = Unirest.get("http://adwira.wien:7826/toGK4?lat="+lat+"&lng="+lng)
                 .asJson();
         JSONObject res = response.getBody().getObject();
-        return searchLocation("coord:"+res.get("x")+":"+res.get("y"), results, stops, false, poi);
+        return searchLocation("coord:"+res.get("x").toString().replaceAll("(\\.[^<]+)", "")
+                +":"+res.get("y").toString().replaceAll("(\\.[^<]+)", ""), results, stops, false, poi);
     }
 
     private List<Product> getStopProdcuts(String stopId) {
