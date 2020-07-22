@@ -12,6 +12,10 @@ import java.util.List;
 public class HafasStopDeserializer implements JsonDeserializer<Stop> {
     List<Product> providerProducts = null;
 
+    public HafasStopDeserializer(List<Product> providerProducts) {
+        this.providerProducts = providerProducts;
+    }
+
     @Override
     public Stop deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         Stop stop = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().fromJson(jsonElement.getAsJsonObject(), Stop.class);
