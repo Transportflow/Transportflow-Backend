@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
 import online.transportflow.backend.providers.regions.BvgProvider;
+import online.transportflow.backend.providers.regions.DbProvider;
 import online.transportflow.backend.providers.regions.DvbProvider;
 import online.transportflow.backend.providers.Provider;
 import spark.Request;
@@ -20,8 +21,9 @@ public class Server {
     static List<Provider> providers = new ArrayList<>();
 
     public static void main(String... args) {
-        providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
+        providers.add(new DbProvider(DbProvider.getProviderProducts()));
         providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
+        providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
 
         staticFiles.location("/public");
 
