@@ -9,7 +9,7 @@ import java.util.List;
 public class BvgProvider extends HafasProvider {
     public BvgProvider(List<Product> products) {
         super("https://bvg.transportflow.online",
-                "Berlin",
+                "Berlin (BVG)",
                 "de",
                 "https://images.unsplash.com/photo-1552035496-08efc7baf40e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80",
                 "white",
