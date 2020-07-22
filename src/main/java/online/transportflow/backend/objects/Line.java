@@ -4,18 +4,18 @@ import com.google.gson.annotations.Expose;
 
 public class Line extends BaseObject {
     @Expose
-    private String name;
+    public String name;
     @Expose
-    private String fahrtNr;
+    public String fahrtNr;
 
     @Expose
-    private Mode mode;
+    public Mode mode;
     @Expose(deserialize = false)
-    private Product product;
+    public Product product;
     @Expose
-    private Route[] routes;
+    public Route[] routes;
     @Expose
-    private Operator operator;
+    public Operator operator;
 
     public void setProduct(Product product) {
         this.product = product;

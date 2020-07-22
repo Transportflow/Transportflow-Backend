@@ -1,6 +1,7 @@
 package online.transportflow.backend.providers;
 
 import online.transportflow.backend.objects.location.Stop;
+import online.transportflow.backend.providers.regions.BvgProvider;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

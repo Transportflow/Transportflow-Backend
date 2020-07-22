@@ -3,7 +3,6 @@ package online.transportflow.backend.providers.HafasUtils;
 import com.google.gson.*;
 import online.transportflow.backend.objects.Product;
 import online.transportflow.backend.objects.location.Stop;
-import online.transportflow.backend.providers.BvgProvider;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

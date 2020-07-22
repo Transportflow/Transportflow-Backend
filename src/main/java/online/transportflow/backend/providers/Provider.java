@@ -40,7 +40,7 @@ public interface Provider {
      */
     List<Stop> searchLocation(double lat, double lng, int radius, int results, boolean stops, boolean poi);
 
-    Monitor getDepartures(String stopId, Date when, int duration);
+    Monitor getDepartures(String stopId, Date when, int duration) throws Exception;
     //List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop);
 
     String getRegionName();

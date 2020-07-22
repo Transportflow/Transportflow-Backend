@@ -55,7 +55,7 @@ public class GeneralProvider implements Provider {
     }
 
     @Override
-    public Monitor getDepartures(String stopId, Date when, int duration) {
+    public Monitor getDepartures(String stopId, Date when, int duration) throws Exception {
         return null;
     }
 }
