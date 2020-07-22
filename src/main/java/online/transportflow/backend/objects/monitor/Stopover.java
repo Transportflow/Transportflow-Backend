@@ -1,59 +1,72 @@
 package online.transportflow.backend.objects.monitor;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import online.transportflow.backend.objects.Line;
+import online.transportflow.backend.objects.Remark;
 import online.transportflow.backend.objects.location.Stop;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * This is either a departure or arrival
  */
-public class VehicleAction {
+public class Stopover {
     @Expose
-    private String tripId;
+    public String tripId;
     @Expose
-    private int trip;
-    @Expose
-    private String direction;
+    public String direction;
 
     @Expose
-    private Line line;
+    public Line line;
     @Expose
-    private Stop stop;
+    public Stop stop;
 
     @Expose
-    private boolean cancelled;
-
-    @Expose
-    @Nullable
-    private Date when;
-    @Expose
-    @Nullable
-    private Date plannedWhen;
-    @Expose
-    @Nullable
-    private Date scheduledWhen;
-    @Expose
-    private int delay;
+    public boolean cancelled;
 
     @Expose
     @Nullable
-    private String platform;
+    public Date when;
     @Expose
     @Nullable
-    private String plannedPlatform;
+    public Date plannedWhen;
     @Expose
     @Nullable
-    private String prognosedPlatform;
+    public Date scheduledWhen;
+    @Expose
+    public int delay;
+
+    @Expose
+    @Nullable
+    public String platform;
+    @Expose
+    @Nullable
+    public String plannedPlatform;
+    @Expose
+    @Nullable
+    public String prognosedPlatform;
+    @Expose(deserialize = false)
+    public long relativeWhen;
+    @Expose(deserialize = false)
+    public String clockWhen;
+
+    @Expose
+    public List<Remark> remarks;
 
     public void polish() {
         // try to always present when
         if (when == null && plannedWhen != null)
             when = plannedWhen;
-        else if (when == null && scheduledWhen != null)
+        else if (when == null && scheduledWhen != null) {
             when = scheduledWhen;
+            plannedWhen = scheduledWhen;
+        }
+
+        if (plannedWhen == null)
+            plannedWhen = when;
 
         // try to always present platform
         if (platform == null && prognosedPlatform != null)

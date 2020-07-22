@@ -3,9 +3,11 @@ package online.transportflow.backend.providers;
 import com.google.gson.annotations.Expose;
 import online.transportflow.backend.objects.Product;
 import online.transportflow.backend.objects.location.Stop;
+import online.transportflow.backend.objects.monitor.Monitor;
 
 import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class GeneralProvider implements Provider {
@@ -49,6 +51,11 @@ public class GeneralProvider implements Provider {
 
     @Override
     public List<Stop> searchLocation(double lat, double lng, int radius, int results, boolean stops, boolean poi)  {
+        return null;
+    }
+
+    @Override
+    public Monitor getDepartures(String stopId, Date when, int duration) {
         return null;
     }
 }
