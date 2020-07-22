@@ -77,7 +77,8 @@ public class HafasProvider extends GeneralProvider {
                 .registerTypeAdapter(Stopover.class, new HafasStopoverDeserializer(super.products))
                 .setPrettyPrinting()
                 .create();
-        return new Monitor(List.of(gson.fromJson(response, Stopover[].class)));
+        List<Stopover> stopovers = List.of(gson.fromJson(response, Stopover[].class));
+        return new Monitor(stopovers.get(0).stop, stopovers);
     }
 
     /*

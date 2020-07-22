@@ -4,8 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
-import online.transportflow.backend.providers.BvgProvider;
-import online.transportflow.backend.providers.DvbProvider;
+import online.transportflow.backend.providers.regions.BvgProvider;
+import online.transportflow.backend.providers.regions.DvbProvider;
 import online.transportflow.backend.providers.Provider;
 import spark.Request;
 
@@ -135,7 +135,8 @@ public class Server {
                 Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
                 return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
             } catch(Exception e) {
-                return "{error: true, msg: \"Haltestelleninformation nicht verfügbar\"}";
+                halt(400, "Haltestelleninformationen aktuell nicht verfügbar");
+                return new Monitor(null, null);
             }
         });
     }
