@@ -8,6 +8,7 @@ import online.transportflow.backend.providers.regions.BvgProvider;
 import online.transportflow.backend.providers.regions.DbProvider;
 import online.transportflow.backend.providers.regions.DvbProvider;
 import online.transportflow.backend.providers.Provider;
+import online.transportflow.backend.providers.regions.VbbProvider;
 import spark.Request;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class Server {
         providers.add(new DbProvider(DbProvider.getProviderProducts()));
         providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
         providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
+        providers.add(new VbbProvider(VbbProvider.getProviderProducts()));
 
         staticFiles.location("/public");
 
