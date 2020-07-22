@@ -3,6 +3,7 @@ package online.transportflow.backend;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import online.transportflow.backend.objects.location.Stop;
+import online.transportflow.backend.objects.monitor.Monitor;
 import online.transportflow.backend.providers.BvgProvider;
 import online.transportflow.backend.providers.DvbProvider;
 import online.transportflow.backend.providers.Provider;
@@ -123,16 +124,20 @@ public class Server {
             return new Gson().toJson(loc);
         });
 
-        /*get("/:region/departures/:stopId", (req, res) -> {
+        get("/:region/departures/:stopId", (req, res) -> {
             Provider provider = req.attribute("provider");
             Date when = new Date();
             if (req.queryParams("when") != null) {
                 when.setTime(Long.parseLong(req.queryParams("when")));
             }
 
-            Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
-            return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
-        });*/
+            try {
+                Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
+                return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
+            } catch(Exception e) {
+                return "{error: true, msg: \"Haltestelleninformation nicht verfügbar\"}";
+            }
+        });
     }
 
     static Provider getProvider(Request req) throws Exception {

@@ -2,8 +2,10 @@ package online.transportflow.backend.providers;
 
 import online.transportflow.backend.objects.*;
 import online.transportflow.backend.objects.location.Stop;
+import online.transportflow.backend.objects.monitor.Monitor;
 
 import java.net.UnknownHostException;
+import java.util.Date;
 import java.util.List;
 
 public interface Provider {
@@ -38,9 +40,8 @@ public interface Provider {
      */
     List<Stop> searchLocation(double lat, double lng, int radius, int results, boolean stops, boolean poi);
 
-    /*Monitor getDepartures(String stopId, Date when, int duration);
-    List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop);
-*/
+    Monitor getDepartures(String stopId, Date when, int duration);
+    //List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop);
 
     String getRegionName();
     List<Product> getProducts();
