@@ -11,10 +11,6 @@ import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.utils.GK4toWGS84;
 import org.matsim.api.core.v01.Coord;
 import org.matsim.core.utils.geometry.transformations.TransformationFactory;
-import org.osgeo.proj4j.ProjCoordinate;
-import org.osgeo.proj4j.Registry;
-import org.osgeo.proj4j.parser.Proj4Parser;
-import org.osgeo.proj4j.proj.Projection;
 
 import java.util.ArrayList;
 import java.util.List;
