@@ -136,7 +136,7 @@ public class Server {
             }
 
             try {
-                Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
+                Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 200);
                 return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
             } catch(Exception e) {
                 halt(400, "Haltestelleninformationen aktuell nicht verfügbar");
