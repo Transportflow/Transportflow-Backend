@@ -5,6 +5,7 @@ import online.transportflow.backend.objects.Line;
 import online.transportflow.backend.objects.Product;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Stopover;
+import online.transportflow.backend.utils.TimeUtils;
 
 import java.lang.reflect.Type;
 import java.util.List;
@@ -28,12 +29,8 @@ public class HafasStopoverDeserializer implements JsonDeserializer<Stopover> {
 
         stopover.delay = stopover.delay/60;
         if (stopover.when != null) {
-            stopover.relativeWhen = (stopover.when.getTime() - System.currentTimeMillis()) / 60000+ "'";
-            if (Integer.parseInt(stopover.relativeWhen.replaceAll("'", "")) > 59)
-                stopover.relativeWhen = (stopover.when.getTime() - System.currentTimeMillis()) / 60000 / 60 + "h";
-            var hours = String.valueOf(stopover.when.getHours());
-            var minutes = String.valueOf(stopover.when.getMinutes());
-            stopover.clockWhen = ("0" + hours).substring(hours.length()-1) + ":" + ("0" + minutes).substring(minutes.length()-1);
+            stopover.relativeWhen = TimeUtils.getRelativeTime(stopover.when);
+            stopover.clockWhen = TimeUtils.getClockTime(stopover.when);
         }
 
         return stopover;

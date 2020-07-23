@@ -4,8 +4,9 @@ import com.google.gson.annotations.Expose;
 import online.transportflow.backend.objects.Product;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
+import online.transportflow.backend.objects.monitor.Stopover;
+import online.transportflow.backend.objects.monitor.UpcomingStopover;
 
-import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -56,6 +57,11 @@ public class GeneralProvider implements Provider {
 
     @Override
     public Monitor getDepartures(String stopId, Date when, int duration) throws Exception {
+        return null;
+    }
+
+    @Override
+    public List<UpcomingStopover> getNextStops(String tripId, String lineName, String currentStopId, String when, Date relativeDepartureTime) {
         return null;
     }
 }

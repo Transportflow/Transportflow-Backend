@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class Stop extends BaseObject {
     @Expose
+    public String id;
+    @Expose
     private String name;
     @Expose
     private Location location;
@@ -32,7 +34,7 @@ public class Stop extends BaseObject {
     private double distance;
 
     public Stop(String id, String name, Location location, @Nullable List<Product> products, @Nullable Stop[] regions, @Nullable Stop[] stations, double distance) {
-        super.id = id;
+        this.id = id;
         this.name = name;
         this.location = location;
         this.products = products;

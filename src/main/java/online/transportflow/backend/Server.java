@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
+import online.transportflow.backend.objects.monitor.Stopover;
+import online.transportflow.backend.objects.monitor.UpcomingStopover;
 import online.transportflow.backend.providers.regions.BvgProvider;
 import online.transportflow.backend.providers.regions.DbProvider;
 import online.transportflow.backend.providers.regions.DvbProvider;
@@ -141,6 +143,23 @@ public class Server {
             } catch(Exception e) {
                 halt(400, "Haltestelleninformationen aktuell nicht verfügbar");
                 return new Monitor(null, null);
+            }
+        });
+
+        get("/:region/upcoming/:tripId", (req, res) -> {
+            Provider provider = req.attribute("provider");
+            Date relativeTo = new Date();
+            if (req.queryParams("relativeto") != null) {
+                relativeTo.setTime(Date.parse(req.queryParams("relativeto")));
+            }
+
+            try {
+                List<UpcomingStopover> upcomingStops = provider.getNextStops(req.params("tripId"), req.queryParams("linename"), req.queryParams("currentstopid"), req.queryParams("when") != null ? req.queryParams("when") : "0", relativeTo);
+                return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(upcomingStops);
+            } catch(Exception e) {
+                throw e;
+                //halt(400, "Kommende Haltestellen aktuell nicht verfügbar");
+                //return List.of(new UpcomingStopover());
             }
         });
     }

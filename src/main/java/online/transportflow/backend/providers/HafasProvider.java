@@ -3,19 +3,23 @@ package online.transportflow.backend.providers;
 import com.github.kevinsawicki.http.HttpRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
+import kong.unirest.Unirest;
 import online.transportflow.backend.objects.*;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
 import online.transportflow.backend.objects.monitor.Stopover;
-import online.transportflow.backend.providers.HafasUtils.HafasLineDeserializer;
+import online.transportflow.backend.objects.monitor.UpcomingStopover;
 import online.transportflow.backend.providers.HafasUtils.HafasStopDeserializer;
 import online.transportflow.backend.providers.HafasUtils.HafasStopoverDeserializer;
+import online.transportflow.backend.providers.HafasUtils.HafasUpcomingStopDeserializer;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class HafasProvider extends GeneralProvider {
     public HafasProvider(String baseUrl, String regionName, String language, String image, String textColor, List<Product> products) {
@@ -79,18 +83,40 @@ public class HafasProvider extends GeneralProvider {
         return new Monitor(stopovers.get(0).stop, stopovers);
     }
 
-    /*
-    @Override
-    public List<UpcomingStop> getNextStops(String tripId, String lineName, String currentStop) {
-        String res = HttpRequest.get(baseUrl +
-                "/stops/" + stopId + "/departures" +
-                "?duration=" + duration +
-                "&when=" + formattedDate +
-                "&language=" + language).body();
 
-        return new ArrayList<>();
+    @Override
+    public List<UpcomingStopover> getNextStops(String tripId, String lineName, String currentStopId, String when, Date relativeDepartureTime) {
+        HttpResponse<JsonNode> response = Unirest.get(baseUrl +
+                "/trips/" + tripId.replaceAll("\\|", "%7C") +
+                "?lineName=" + lineName +
+                "&stopovers=" + true +
+                "&language=" + language).asJson();
+
+        String upcomingStopovers = response.getBody().getObject().get("stopovers").toString();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(UpcomingStopover.class, new HafasUpcomingStopDeserializer(super.products))
+                .setPrettyPrinting()
+                .create();
+        List<UpcomingStopover> nextStops = new ArrayList<>(List.of(gson.fromJson(upcomingStopovers, UpcomingStopover[].class)));
+        nextStops.forEach(nextStop -> {
+            nextStop.generateRelatives(relativeDepartureTime);
+        });
+
+        int removeIndex = 0;
+        for (int i = 0; i < nextStops.size(); i++) {
+            try {
+                if (Integer.parseInt(nextStops.get(i).relativeArrival.replace("'", "").replace("h", "")) > 0 && removeIndex == 0)
+                    removeIndex = i++;
+            } catch(Exception ignore) {}
+        }
+        for (int i = 0; i < removeIndex; i++) {
+            nextStops.remove(0);
+        }
+
+        return nextStops;
     }
 
+    /*
     private Location parseLocation(JSONObject obj) {
         LocationType type = getType(obj);
         Coordinates coordinates;

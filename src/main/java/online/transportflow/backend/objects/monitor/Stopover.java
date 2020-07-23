@@ -36,6 +36,9 @@ public class Stopover {
     @Expose
     @Nullable
     public Date scheduledWhen;
+    @Expose(deserialize = false)
+    @Nullable
+    public String rawWhen;
     @Expose
     public int delay;
 
