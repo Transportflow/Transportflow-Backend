@@ -4,21 +4,19 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 import kong.unirest.json.JSONArray;
-import kong.unirest.json.JSONException;
 import kong.unirest.json.JSONObject;
 import online.transportflow.backend.objects.Line;
-import online.transportflow.backend.objects.Operator;
 import online.transportflow.backend.objects.Product;
 import online.transportflow.backend.objects.location.Location;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
 import online.transportflow.backend.objects.monitor.Stopover;
+import online.transportflow.backend.objects.monitor.UpcomingStopover;
 import online.transportflow.backend.providers.GeneralProvider;
-import online.transportflow.backend.utils.GK4toWGS84;
+import online.transportflow.backend.utils.TimeUtils;
 import org.matsim.api.core.v01.Coord;
 import org.matsim.core.utils.geometry.transformations.TransformationFactory;
 
-import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
@@ -124,23 +122,28 @@ public class DvbProvider extends GeneralProvider {
             line.fahrtNr = jsonStopover.getString("Id");
             line.product = getProduct(jsonStopover.getString("Mot"));
 
+            String plannedWhenRaw = "";
             Date plannedWhen = null;
             if (jsonStopover.has("ScheduledTime")) {
-                long plannedLong = Long.parseLong(jsonStopover.get("ScheduledTime").toString()
-                        .replaceAll("/Date\\(", "").replaceAll("-0000\\)/", ""));
+                plannedWhenRaw = jsonStopover.get("ScheduledTime").toString();
+                long plannedLong = parseDate(jsonStopover.get("ScheduledTime").toString());
                 plannedWhen = new Date(plannedLong);
             }
 
+            String realtimeWhenRaw = "";
             Date realtimeWhen = null;
             if (jsonStopover.has("RealTime")) {
-                long realtimeLong = Long.parseLong(jsonStopover.get("RealTime").toString()
-                        .replaceAll("/Date\\(", "").replaceAll("-0000\\)/", ""));
+                realtimeWhenRaw = jsonStopover.get("RealTime").toString();
+                long realtimeLong = parseDate(jsonStopover.get("RealTime").toString());
                 realtimeWhen = new Date(realtimeLong);
             }
-            if (plannedWhen == null)
+            if (plannedWhen == null) {
                 plannedWhen = realtimeWhen;
-            else if (realtimeWhen == null)
+                plannedWhenRaw = realtimeWhenRaw;
+            } else if (realtimeWhen == null) {
                 realtimeWhen = plannedWhen;
+                realtimeWhenRaw = plannedWhenRaw;
+            }
 
             int delay = (int) ((realtimeWhen.getTime() - plannedWhen.getTime())/60000);
 
@@ -149,13 +152,8 @@ public class DvbProvider extends GeneralProvider {
             if (jsonStopover.has("Platform"))
                 platform = new JsonNode(jsonStopover.get("Platform").toString()).getObject().getString("Name");
 
-            String relativeWhen = (realtimeWhen.getTime() - System.currentTimeMillis()) / 60000 + "'";
-            if (Integer.parseInt(relativeWhen.replaceAll("'", "")) > 59)
-                relativeWhen = (realtimeWhen.getTime() - System.currentTimeMillis()) / 60000 / 60 + "h";
-
-            var hours = String.valueOf(realtimeWhen.getHours());
-            var minutes = String.valueOf(realtimeWhen.getMinutes());
-            String clockWhen = ("0" + hours).substring(hours.length()-1) + ":" + ("0" + minutes).substring(minutes.length()-1);
+            String relativeWhen = TimeUtils.getRelativeTime(realtimeWhen);
+            String clockWhen = TimeUtils.getClockTime(realtimeWhen);
 
             Stopover stopover = new Stopover(jsonStopover.getString("Id"),
                     jsonStopover.getString("Direction"),
@@ -164,11 +162,61 @@ public class DvbProvider extends GeneralProvider {
                     null, null,
                     relativeWhen,
                     clockWhen, new ArrayList<>());
+            stopover.rawWhen = realtimeWhenRaw;
             stopovers.add(stopover);
         });
 
 
         return new Monitor(stop, stopovers);
+    }
+
+    @Override
+    public List<UpcomingStopover> getNextStops(String tripId, String lineName, String currentStopId, String when, Date relativeDepartureTime) {
+        HttpResponse<JsonNode> response = Unirest.post(baseUrl + "/dm/trip")
+                .field("tripid", tripId)
+                .field("time", when)
+                .field("stopid", currentStopId)
+                .asJson();
+
+        JSONObject res = response.getBody().getObject();
+        if (!new JsonNode(res.get("Status").toString()).getObject().get("Code").equals("Ok"))
+            throw new IllegalArgumentException();
+
+        JSONArray jsonStopovers = new JsonNode(res.get("Stops").toString()).getArray();
+
+        List<UpcomingStopover> upcomingStopovers = new ArrayList<>();
+
+        jsonStopovers.forEach(o -> {
+            JSONObject stopover = new JsonNode(o.toString()).getObject();
+
+            // remove previous stops
+            var currentPosition = stopover.get("Position").toString();
+            if (currentPosition.equals("Previous") || currentPosition.equals("Current"))
+                return;
+
+            List<Product> stopProducts = getStopProdcuts(stopover.get("Id").toString());
+
+            String address = stopover.get("Name") + ", " + stopover.get("Place");
+            Stop s = new Stop(stopover.get("Id").toString(), stopover.get("Name").toString(),
+                    new Location(address, address, 0, 0, 0), stopProducts, null, null, 0);
+
+            Date time = new Date(parseDate(stopover.get("Time").toString()));
+            String relativeTime = TimeUtils.getRelativeTime(time, relativeDepartureTime.getTime());
+            String clockTime = TimeUtils.getClockTime(time);
+
+            String platform = new JsonNode(stopover.get("Platform").toString()).getObject().get("Name").toString();
+
+            UpcomingStopover upcomingStopover = new UpcomingStopover(s, time, time, relativeTime,
+                    clockTime, 0, platform, platform, time, time, relativeTime, clockTime, 0,
+                    platform, platform);
+            upcomingStopovers.add(upcomingStopover);
+        });
+
+        return upcomingStopovers;
+    }
+
+    private long parseDate(String input) {
+        return Long.parseLong(input.replaceAll("/Date\\(", "").replaceAll("-0000\\)/", ""));
     }
 
     private List<Product> getStopProdcuts(String stopId) {
