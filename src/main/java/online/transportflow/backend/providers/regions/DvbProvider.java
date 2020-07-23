@@ -40,7 +40,7 @@ public class DvbProvider extends GeneralProvider {
         List<Product> products = new ArrayList<>();
         products.add(new Product("Tram", "Straßenbahn", "https://www.dvb.de/assets/img/trans-icon/transport-tram.svg"));
         products.add(new Product("CityBus", "Bus", "https://www.dvb.de/assets/img/trans-icon/transport-bus.svg"));
-        products.add(new Product("IntercityBus", "Regio-Bus", "https://www.dvb.de/assets/img/trans-icon/transport-bus.svg"));
+        products.add(new Product("IntercityBus", "Regio-Bus", "https://upload.wikimedia.org/wikipedia/commons/8/83/BUS-Logo-BVG.svg"));
         products.add(new Product("SuburbanRailway", "S-Bahn", "https://www.dvb.de/assets/img/trans-icon/transport-metropolitan.svg"));
         products.add(new Product("Train", "Zug", "https://www.dvb.de/assets/img/trans-icon/transport-train.svg"));
         products.add(new Product("Cableway", "Seil-/Schwebebahn", "https://www.dvb.de/assets/img/trans-icon/transport-lift.svg"));

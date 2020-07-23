@@ -23,9 +23,8 @@ public class BvgProvider extends HafasProvider {
         products.add(new Product("tram", "Straßenbahn", "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tram-Logo.svg"));
         products.add(new Product("bus", "Bus", "https://upload.wikimedia.org/wikipedia/commons/8/83/BUS-Logo-BVG.svg"));
         products.add(new Product("ferry", "Fähre", "https://upload.wikimedia.org/wikipedia/commons/d/d6/F%C3%A4hre-Logo-BVG.svg"));
-        // TODO: find proper train icons
-        products.add(new Product("express", "IC/ICE", "https://upload.wikimedia.org/wikipedia/commons/6/6f/IC-Logo.svg"));
-        products.add(new Product("regional", "RE/RB", "https://www.dvb.de/assets/img/trans-icon/transport-train.svg"));
+        products.add(new Product("express", "IC/ICE", "https://www.dvb.de/assets/img/trans-icon/transport-train.svg"));
+        products.add(new Product("regional", "RE/RB", "https://upload.wikimedia.org/wikipedia/commons/d/d5/Deutsche_Bahn_AG-Logo.svg"));
         return products;
     }
 }
