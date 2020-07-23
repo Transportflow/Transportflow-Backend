@@ -33,7 +33,6 @@ public class HafasProvider extends GeneralProvider {
                 "&results=" + results +
                 "&stops=" + stops +
                 "&addresses=" + addresses +
-                "&poi=" + poi +
                 "&language=" + language).body();
 
         Gson gson = new GsonBuilder()
@@ -55,7 +54,6 @@ public class HafasProvider extends GeneralProvider {
                 "&distance=" + radius +
                 "&results=" + results +
                 "&stops=" + stops +
-                "&poi=" + poi +
                 "&language=" + language).body();
 
         Gson gson = new GsonBuilder()
