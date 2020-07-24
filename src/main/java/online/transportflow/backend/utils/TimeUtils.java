@@ -10,7 +10,7 @@ public class TimeUtils {
     public static String getRelativeTime(Date to, long relative) {
         int relativeWhen = Long.valueOf((to.getTime() - relative) / 60000).intValue();
         var prefix = relativeWhen > 0 ? "+" : "";
-        if (relativeWhen < 59) {
+        if (relativeWhen < 60) {
             return prefix + relativeWhen + "'";
         } else
             return prefix + relativeWhen / 60 + "h";

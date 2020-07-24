@@ -22,6 +22,9 @@ public class GeneralProvider implements Provider {
     public String textColor;
 
     @Expose(serialize = true)
+    public boolean beta = false;
+
+    @Expose(serialize = true)
     public List<Product> products;
     @Expose(serialize = false)
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");

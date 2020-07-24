@@ -2,17 +2,19 @@ package online.transportflow.backend;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
+import kong.unirest.Unirest;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
 import online.transportflow.backend.objects.monitor.Stopover;
 import online.transportflow.backend.objects.monitor.UpcomingStopover;
-import online.transportflow.backend.providers.regions.BvgProvider;
-import online.transportflow.backend.providers.regions.DbProvider;
-import online.transportflow.backend.providers.regions.DvbProvider;
+import online.transportflow.backend.providers.regions.*;
 import online.transportflow.backend.providers.Provider;
-import online.transportflow.backend.providers.regions.VbbProvider;
 import spark.Request;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -28,6 +30,7 @@ public class Server {
         providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
         providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
         providers.add(new VbbProvider(VbbProvider.getProviderProducts()));
+        providers.add(new OebbProvider(OebbProvider.getProviderProducts()));
 
         staticFiles.location("/public");
 
@@ -138,7 +141,7 @@ public class Server {
             }
 
             try {
-                Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 200);
+                Monitor monitor = provider.getDepartures(req.params("stopId"), when, req.queryParams("duration") != null ? Integer.parseInt(req.queryParams("duration")) : 250);
                 return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(monitor);
             } catch(Exception e) {
                 halt(400, "Haltestelleninformationen aktuell nicht verfügbar");

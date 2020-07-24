@@ -117,10 +117,10 @@ public class DvbProvider extends GeneralProvider {
         jsonStopovers.forEach(o -> {
             JSONObject jsonStopover = new JsonNode(o.toString()).getObject();
 
-            Line line = new Line();
-            line.name = jsonStopover.getString("LineName");
-            line.fahrtNr = jsonStopover.getString("Id");
-            line.product = getProduct(jsonStopover.getString("Mot"));
+            Line line = new Line(jsonStopover.getString("LineName"),
+                    jsonStopover.getString("Id"),
+                    jsonStopover.getString("Mot").toLowerCase(),
+                    getProduct(jsonStopover.getString("Mot")), null, null);
 
             String plannedWhenRaw = "";
             Date plannedWhen = null;
