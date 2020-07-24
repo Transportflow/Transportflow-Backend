@@ -30,6 +30,7 @@ public class Server {
         providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
         providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
         providers.add(new VbbProvider(VbbProvider.getProviderProducts()));
+        providers.add(new InsaProvider(InsaProvider.getProviderProducts()));
         providers.add(new OebbProvider(OebbProvider.getProviderProducts()));
 
         staticFiles.location("/public");

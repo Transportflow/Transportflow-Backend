@@ -18,8 +18,6 @@ import online.transportflow.backend.providers.HafasUtils.HafasUpcomingStopDeseri
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class HafasProvider extends GeneralProvider {
     public HafasProvider(String baseUrl, String regionName, String language, String image, String textColor, List<Product> products) {
