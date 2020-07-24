@@ -157,9 +157,8 @@ public class Server {
                 List<UpcomingStopover> upcomingStops = provider.getNextStops(req.params("tripId"), req.queryParams("linename"), req.queryParams("currentstopid"), req.queryParams("when") != null ? req.queryParams("when") : "0", relativeTo);
                 return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(upcomingStops);
             } catch(Exception e) {
-                throw e;
-                //halt(400, "Kommende Haltestellen aktuell nicht verfügbar");
-                //return List.of(new UpcomingStopover());
+                halt(400, "Weitere Haltestelleninformationen aktuell nicht verfügbar");
+                return List.of(new UpcomingStopover());
             }
         });
     }

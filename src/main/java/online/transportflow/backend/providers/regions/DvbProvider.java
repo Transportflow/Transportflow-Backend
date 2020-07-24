@@ -204,7 +204,12 @@ public class DvbProvider extends GeneralProvider {
             String relativeTime = TimeUtils.getRelativeTime(time, relativeDepartureTime.getTime());
             String clockTime = TimeUtils.getClockTime(time);
 
-            String platform = new JsonNode(stopover.get("Platform").toString()).getObject().get("Name").toString();
+            String platform;
+            try {
+                platform = new JsonNode(stopover.get("Platform").toString()).getObject().get("Name").toString();
+            } catch(Exception e) {
+                platform = "N/A";
+            }
 
             UpcomingStopover upcomingStopover = new UpcomingStopover(s, time, time, relativeTime,
                     clockTime, 0, platform, platform, time, time, relativeTime, clockTime, 0,
