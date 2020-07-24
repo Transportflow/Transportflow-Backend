@@ -12,6 +12,7 @@ import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
 import online.transportflow.backend.objects.monitor.Stopover;
 import online.transportflow.backend.objects.monitor.UpcomingStopover;
+import online.transportflow.backend.providers.DefaultLogos;
 import online.transportflow.backend.providers.GeneralProvider;
 import online.transportflow.backend.utils.TimeUtils;
 import org.matsim.api.core.v01.Coord;
@@ -36,14 +37,14 @@ public class DvbProvider extends GeneralProvider {
 
     public static List<Product> getProviderProducts() {
         List<Product> products = new ArrayList<>();
-        products.add(new Product("Tram", "Straßenbahn", "https://www.dvb.de/assets/img/trans-icon/transport-tram.svg"));
+        products.add(new Product("Tram", "Straßenbahn", DefaultLogos.getTram()));
         products.add(new Product("CityBus", "Bus", "https://www.dvb.de/assets/img/trans-icon/transport-bus.svg"));
-        products.add(new Product("IntercityBus", "Regio-Bus", "https://upload.wikimedia.org/wikipedia/commons/8/83/BUS-Logo-BVG.svg"));
-        products.add(new Product("SuburbanRailway", "S-Bahn", "https://www.dvb.de/assets/img/trans-icon/transport-metropolitan.svg"));
+        products.add(new Product("IntercityBus", "Regio-Bus", DefaultLogos.getBus()));
+        products.add(new Product("SuburbanRailway", "S-Bahn", DefaultLogos.getSuburban()));
         products.add(new Product("Train", "Zug", "https://www.dvb.de/assets/img/trans-icon/transport-train.svg"));
         products.add(new Product("Cableway", "Seil-/Schwebebahn", "https://www.dvb.de/assets/img/trans-icon/transport-lift.svg"));
-        products.add(new Product("Ferry", "Fähre", "https://www.dvb.de/assets/img/trans-icon/transport-ferry.svg"));
-        products.add(new Product("HailedSharedTaxi", "Anrufsammeltaxi (AST)/ Rufbus", "https://www.dvb.de/assets/img/trans-icon/transport-alita.svg"));
+        products.add(new Product("Ferry", "Fähre", DefaultLogos.getFerry()));
+        products.add(new Product("HailedSharedTaxi", "Anrufsammeltaxi (AST)/ Rufbus", DefaultLogos.getTaxi()));
         products.add(new Product("Footpath", "Fussweg", "https://m.dvb.de/img/walk.svg"));
         products.add(new Product("StairsUp", "Treppe aufwärts", "https://m.dvb.de/img/stairs-up.svg"));
         products.add(new Product("StairsDown", "Treppe abwärts", "https://m.dvb.de/img/stairs-down.svg"));

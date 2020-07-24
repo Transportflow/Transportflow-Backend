@@ -1,6 +1,7 @@
 package online.transportflow.backend.providers.regions;
 
 import online.transportflow.backend.objects.Product;
+import online.transportflow.backend.providers.DefaultLogos;
 import online.transportflow.backend.providers.HafasProvider;
 
 import java.util.ArrayList;
@@ -19,16 +20,16 @@ public class OebbProvider extends HafasProvider {
 
     public static List<Product> getProviderProducts() {
         List<Product> products = new ArrayList<>();
-        products.add(new Product("nationalExpress", "ICE", "https://upload.wikimedia.org/wikipedia/commons/b/bc/ICE-Logo.svg"));
-        products.add(new Product("national", "IC/EC", "https://upload.wikimedia.org/wikipedia/commons/6/6f/IC-Logo.svg"));
-        products.add(new Product("interregional", "Durchgangszug & EuroNight", ""));
-        products.add(new Product("regional", "R/REX", "https://www.dvb.de/assets/img/trans-icon/transport-train.svg"));
-        products.add(new Product("suburban", "S-Bahn", "https://upload.wikimedia.org/wikipedia/commons/e/e7/S-Bahn-Logo.svg"));
-        products.add(new Product("bus", "Bus", "https://upload.wikimedia.org/wikipedia/commons/8/83/BUS-Logo-BVG.svg"));
-        products.add(new Product("ferry", "Fähre", "https://upload.wikimedia.org/wikipedia/commons/d/d6/F%C3%A4hre-Logo-BVG.svg"));
-        products.add(new Product("subway", "U-Bahn", "https://upload.wikimedia.org/wikipedia/commons/a/a3/U-Bahn.svg"));
-        products.add(new Product("tram", "Tram", "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tram-Logo.svg"));
-        products.add(new Product("onCall", "Anruftaxi", "https://www.dvb.de/assets/img/trans-icon/transport-alita.svg"));
+        products.add(new Product("nationalExpress", "ICE", DefaultLogos.getInterCityExpress()));
+        products.add(new Product("national", "IC/EC", DefaultLogos.getInterCity()));
+        products.add(new Product("interregional", "Durchgangszug & EuroNight", DefaultLogos.getTrain()));
+        products.add(new Product("regional", "R/REX", DefaultLogos.getRegional()));
+        products.add(new Product("suburban", "S-Bahn", DefaultLogos.getSuburban()));
+        products.add(new Product("bus", "Bus", DefaultLogos.getBus()));
+        products.add(new Product("ferry", "Fähre", DefaultLogos.getFerry()));
+        products.add(new Product("subway", "U-Bahn", DefaultLogos.getSubway()));
+        products.add(new Product("tram", "Tram", DefaultLogos.getTram()));
+        products.add(new Product("onCall", "Anruftaxi", DefaultLogos.getTaxi()));
         return products;
     }
 }

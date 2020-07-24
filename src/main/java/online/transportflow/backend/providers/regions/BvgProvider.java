@@ -1,6 +1,7 @@
 package online.transportflow.backend.providers.regions;
 
 import online.transportflow.backend.objects.Product;
+import online.transportflow.backend.providers.DefaultLogos;
 import online.transportflow.backend.providers.HafasProvider;
 
 import java.util.ArrayList;
@@ -18,13 +19,13 @@ public class BvgProvider extends HafasProvider {
 
     public static List<Product> getProviderProducts() {
         List<Product> products = new ArrayList<>();
-        products.add(new Product("suburban", "S-Bahn", "https://upload.wikimedia.org/wikipedia/commons/e/e7/S-Bahn-Logo.svg"));
-        products.add(new Product("subway", "U-Bahn", "https://upload.wikimedia.org/wikipedia/commons/e/ee/U-Bahn_Berlin_logo.svg"));
-        products.add(new Product("tram", "Straßenbahn", "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tram-Logo.svg"));
-        products.add(new Product("bus", "Bus", "https://upload.wikimedia.org/wikipedia/commons/8/83/BUS-Logo-BVG.svg"));
-        products.add(new Product("ferry", "Fähre", "https://upload.wikimedia.org/wikipedia/commons/d/d6/F%C3%A4hre-Logo-BVG.svg"));
-        products.add(new Product("express", "IC/ICE", "https://www.dvb.de/assets/img/trans-icon/transport-train.svg"));
-        products.add(new Product("regional", "RE/RB", "https://upload.wikimedia.org/wikipedia/commons/d/d5/Deutsche_Bahn_AG-Logo.svg"));
+        products.add(new Product("suburban", "S-Bahn", DefaultLogos.getSuburban()));
+        products.add(new Product("subway", "U-Bahn", DefaultLogos.getSubway()));
+        products.add(new Product("tram", "Straßenbahn", DefaultLogos.getTram()));
+        products.add(new Product("bus", "Bus", DefaultLogos.getBus()));
+        products.add(new Product("ferry", "Fähre", DefaultLogos.getFerry()));
+        products.add(new Product("express", "IC/ICE", DefaultLogos.getTrain()));
+        products.add(new Product("regional", "RE/RB", DefaultLogos.getRegional()));
         return products;
     }
 }
