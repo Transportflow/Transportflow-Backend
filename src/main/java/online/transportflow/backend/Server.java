@@ -164,6 +164,27 @@ public class Server {
                 return List.of(new UpcomingStopover());
             }
         });
+
+        get("/:region/wagenreihung/:train", (req, res) -> {
+            Date when = new Date();
+            if (req.queryParams("when") != null) {
+                when.setTime(Date.parse(req.queryParams("when")));
+            }
+            DateFormat dateFormat = new SimpleDateFormat("yyyyMMddkkmm");
+            String strDate = dateFormat.format(when);
+
+            String train = req.params("train").replaceAll("[^\\d.]", "");
+
+            try {
+                HttpResponse<JsonNode> response = Unirest.get("https://www.apps-bahn.de/wr/wagenreihung/1.0/"+train+"/"+strDate).asJson();
+                if (response.getBody().getObject().has("error"))
+                    throw new IllegalArgumentException();
+                return response.getBody().toString();
+            } catch(Exception e) {
+                halt(400, "Wagenreihung aktuell nicht verfügbar");
+                return null;
+            }
+        });
     }
 
     static Provider getProvider(Request req) throws Exception {
