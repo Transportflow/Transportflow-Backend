@@ -13,9 +13,8 @@ public class InsaProvider extends HafasProvider {
                 "Sachsen-Anhalt (INSA)",
                 "de",
                 "https://images.unsplash.com/photo-1569663950244-5f2616a977a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                "black",
+                "white",
                 products);
-        super.beta = true;
     }
 
     public static List<Product> getProviderProducts() {
