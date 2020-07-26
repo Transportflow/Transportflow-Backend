@@ -39,25 +39,31 @@ public class Server {
                 (request, response) -> {
 
                     String accessControlRequestHeaders = request
-                            .headers("Access-Control-Request-Headers");
-                    if (accessControlRequestHeaders != null) {
-                        response.header("Access-Control-Allow-Headers",
-                                accessControlRequestHeaders);
-                    }
+                    .headers("Access-Control-Request-Headers");
+            if (accessControlRequestHeaders != null) {
+                response.header("Access-Control-Allow-Headers",
+                        "Authorization");
+            }
 
-                    String accessControlRequestMethod = request
-                            .headers("Access-Control-Request-Method");
-                    if (accessControlRequestMethod != null) {
-                        response.header("Access-Control-Allow-Methods",
-                                accessControlRequestMethod);
-                    }
+            String accessControlRequestMethod = request
+                    .headers("Access-Control-Request-Method");
+            if (accessControlRequestMethod != null) {
+                response.header("Access-Control-Allow-Methods",
+                        "HEAD, GET, OPTIONS, POST");
+            }
 
-                    response.header("Access-Control-Allow-Origin", "*");
-
-                    return "OK";
+            return "OK";
                 });
 
-        before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
+        before((request, response) -> {
+	response.header("Access-Control-Allow-Origin", "*");
+            response.header("Access-Control-Allow-Headers", "*");
+            if (!validateRequest(request)) {
+                halt(HttpStatusCodes.STATUS_CODE_UNAUTHORIZED);
+            }
+            response.type("application/json");
+
+});
 
         get("/providers", (req, res) -> {
             res.type("application/json");
