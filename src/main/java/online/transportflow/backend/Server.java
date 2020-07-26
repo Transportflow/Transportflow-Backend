@@ -59,7 +59,7 @@ public class Server {
             return "OK";
         });
 
-        after((Filter) (request, response) -> {
+        after((request, response) -> {
 	    response.header("Access-Control-Allow-Origin", "*");
             response.header("Access-Control-Allow-Headers", "GET,POST,PUT,OPTIONS");
 
