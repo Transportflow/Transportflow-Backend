@@ -58,10 +58,9 @@ public class Server {
             return "OK";
         });
 
-        before((request, response) -> {
+        after((Filter) (request, response) -> {
 	    response.header("Access-Control-Allow-Origin", "*");
-            response.header("Access-Control-Allow-Headers", "*");
-            response.type("application/json");
+            response.header("Access-Control-Allow-Headers", "GET,POST,PUT,OPTIONS");
 
 	});
 
