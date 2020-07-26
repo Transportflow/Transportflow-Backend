@@ -11,7 +11,6 @@ import online.transportflow.backend.objects.monitor.Stopover;
 import online.transportflow.backend.objects.monitor.UpcomingStopover;
 import online.transportflow.backend.providers.regions.*;
 import online.transportflow.backend.providers.Provider;
-import com.google.api.client.http.HttpStatusCodes;
 import spark.Request;
 
 import java.text.DateFormat;
@@ -40,8 +39,7 @@ public class Server {
 
         staticFiles.location("/public");
 
-        options("/*",
-                (request, response) -> {
+        options("/*", (request, response) -> {
 
                     String accessControlRequestHeaders = request
                     .headers("Access-Control-Request-Headers");
@@ -58,17 +56,14 @@ public class Server {
             }
 
             return "OK";
-                });
+        });
 
         before((request, response) -> {
-	response.header("Access-Control-Allow-Origin", "*");
+	    response.header("Access-Control-Allow-Origin", "*");
             response.header("Access-Control-Allow-Headers", "*");
-            if (!validateRequest(request)) {
-                halt(HttpStatusCodes.STATUS_CODE_UNAUTHORIZED);
-            }
             response.type("application/json");
 
-});
+	});
 
         get("/providers", (req, res) -> {
             res.type("application/json");
