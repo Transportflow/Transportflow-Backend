@@ -11,6 +11,7 @@ import online.transportflow.backend.objects.monitor.Stopover;
 import online.transportflow.backend.objects.monitor.UpcomingStopover;
 import online.transportflow.backend.providers.regions.*;
 import online.transportflow.backend.providers.Provider;
+import com.google.api.client.http.HttpStatusCodes;
 import spark.Request;
 
 import java.text.DateFormat;
@@ -20,6 +21,10 @@ import java.util.Date;
 import java.util.List;
 
 import static spark.Spark.*;
+import static spark.Spark.before;
+import static spark.Spark.halt;
+import static spark.Spark.options;
+import static spark.Spark.port;
 
 public class Server {
 
