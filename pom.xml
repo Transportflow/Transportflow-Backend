@@ -76,9 +76,7 @@
             <groupId>com.konghq</groupId>
             <artifactId>unirest-java</artifactId>
             <version>3.8.06</version>
-            <scope>system</scope>
-            <classifier>standalone</classifier>
-            <systemPath>${project.basedir}/lib/unirest-java-3.8.06-standalone.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
