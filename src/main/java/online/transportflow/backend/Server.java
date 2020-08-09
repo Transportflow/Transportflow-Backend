@@ -149,6 +149,7 @@ public class Server {
             Provider provider = req.attribute("provider");
             Date when = new Date();
 
+            // Designed to run on a server with UTC Timezone
             if (req.queryParams("when") != null) {
                 when.setTime(LocalDateTime.ofEpochSecond(Long.parseLong(req.queryParams("when")), 0, ZoneOffset.UTC).toInstant(ZoneOffset.UTC).toEpochMilli());
             }
