@@ -15,6 +15,9 @@ import spark.Request;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.temporal.Temporal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -145,8 +148,9 @@ public class Server {
         get("/:region/departures/:stopId", (req, res) -> {
             Provider provider = req.attribute("provider");
             Date when = new Date();
+
             if (req.queryParams("when") != null) {
-                when.setTime(Long.parseLong(req.queryParams("when")));
+                when.setTime(LocalDateTime.ofEpochSecond(Long.parseLong(req.queryParams("when")), 0, ZoneOffset.UTC).toInstant(ZoneOffset.UTC).toEpochMilli());
             }
 
             try {
