@@ -16,11 +16,13 @@ import spark.Request;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.temporal.Temporal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import static spark.Spark.*;
 import static spark.Spark.before;
@@ -185,6 +187,7 @@ public class Server {
                 when.setTime(Date.parse(req.queryParams("when")));
             }
             DateFormat dateFormat = new SimpleDateFormat("yyyyMMddkkmm");
+            dateFormat.setTimeZone(TimeZone.getTimeZone(ZoneId.of("Europe/Paris")));
             String strDate = dateFormat.format(when);
 
             String train = req.params("train").replaceAll("[^\\d.]", "");
