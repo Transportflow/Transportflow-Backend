@@ -12,9 +12,11 @@ import java.util.List;
 
 public class HafasStopoverDeserializer implements JsonDeserializer<Stopover> {
     List<Product> providerProducts = null;
+    long relative = 0;
 
-    public HafasStopoverDeserializer(List<Product> providerProducts) {
+    public HafasStopoverDeserializer(List<Product> providerProducts, long relative) {
         this.providerProducts = providerProducts;
+        this.relative = relative;
     }
 
     @Override
@@ -29,7 +31,7 @@ public class HafasStopoverDeserializer implements JsonDeserializer<Stopover> {
 
         stopover.delay = stopover.delay/60;
         if (stopover.when != null) {
-            stopover.relativeWhen = TimeUtils.getRelativeTime(stopover.when);
+            stopover.relativeWhen = TimeUtils.getRelativeTime(stopover.when, relative);
             stopover.clockWhen = TimeUtils.getClockTime(stopover.when);
         }
 

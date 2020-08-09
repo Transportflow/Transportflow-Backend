@@ -153,7 +153,7 @@ public class DvbProvider extends GeneralProvider {
             if (jsonStopover.has("Platform"))
                 platform = new JsonNode(jsonStopover.get("Platform").toString()).getObject().getString("Name");
 
-            String relativeWhen = TimeUtils.getRelativeTime(realtimeWhen);
+            String relativeWhen = TimeUtils.getRelativeTime(realtimeWhen, when.getTime());
             String clockWhen = TimeUtils.getClockTime(realtimeWhen);
 
             Stopover stopover = new Stopover(jsonStopover.getString("Id"),

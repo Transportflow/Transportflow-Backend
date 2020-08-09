@@ -74,7 +74,7 @@ public class HafasProvider extends GeneralProvider {
                 "&when=" + formattedDate +
                 "&language=" + language).body();
         Gson gson = new GsonBuilder()
-                .registerTypeAdapter(Stopover.class, new HafasStopoverDeserializer(super.products))
+                .registerTypeAdapter(Stopover.class, new HafasStopoverDeserializer(super.products, when.getTime()))
                 .setPrettyPrinting()
                 .create();
         List<Stopover> stopovers = List.of(gson.fromJson(response, Stopover[].class));
