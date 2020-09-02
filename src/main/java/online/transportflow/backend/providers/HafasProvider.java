@@ -85,7 +85,7 @@ public class HafasProvider extends GeneralProvider {
     @Override
     public List<UpcomingStopover> getNextStops(String tripId, String lineName, String currentStopId, String when, Date relativeDepartureTime) {
         HttpResponse<JsonNode> response = Unirest.get(baseUrl +
-                "/trips/" + tripId.replaceAll("\\|", "%7C") +
+                "/trips/" + tripId.replaceAll("\\|", "%7C").replaceAll("#", "%23") +
                 "?lineName=" + lineName +
                 "&stopovers=" + true +
                 "&language=" + language).asJson();
