@@ -1,7 +1,6 @@
 package online.transportflow.backend.objects.monitor;
 
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import online.transportflow.backend.objects.Line;
 import online.transportflow.backend.objects.Remark;
 import online.transportflow.backend.objects.location.Stop;
@@ -60,7 +59,7 @@ public class Stopover {
     @Expose
     public List<Remark> remarks;
 
-    public Stopover(String tripId, String direction, Line line, Stop stop, boolean cancelled, @Nullable Date when, @Nullable Date plannedWhen, @Nullable Date scheduledWhen, int delay, @Nullable String platform, @Nullable String plannedPlatform, @Nullable String prognosedPlatform, String relativeWhen, String clockWhen, List<Remark> remarks) {
+    public Stopover(String tripId, String direction, Line line, Stop stop, boolean cancelled, @Nullable Date when, @Nullable Date plannedWhen, @Nullable Date scheduledWhen, int delay, @Nullable String platform, @Nullable String plannedPlatform, @Nullable String prognosedPlatform, List<Remark> remarks) {
         this.tripId = tripId;
         this.direction = direction;
         this.line = line;
@@ -73,8 +72,6 @@ public class Stopover {
         this.platform = platform;
         this.plannedPlatform = plannedPlatform;
         this.prognosedPlatform = prognosedPlatform;
-        this.relativeWhen = relativeWhen;
-        this.clockWhen = clockWhen;
         this.remarks = remarks;
     }
 

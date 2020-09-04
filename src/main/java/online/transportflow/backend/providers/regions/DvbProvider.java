@@ -101,7 +101,8 @@ public class DvbProvider extends GeneralProvider {
         HttpResponse<JsonNode> response = Unirest.post(baseUrl + "/dm")
                 .field("stopid", stopId)
                 .field("limit", String.valueOf(duration))
-                .field("time", when.toInstant().truncatedTo(ChronoUnit.MINUTES).toString())
+                //.field("time", when.toInstant().truncatedTo(ChronoUnit.MINUTES).toString())
+                //.field("shorttermchanges", String.valueOf(true))
                 .field("isarrival", String.valueOf(false))
                 .asJson();
         JSONObject res = response.getBody().getObject();
@@ -153,16 +154,14 @@ public class DvbProvider extends GeneralProvider {
             if (jsonStopover.has("Platform"))
                 platform = new JsonNode(jsonStopover.get("Platform").toString()).getObject().getString("Name");
 
-            String relativeWhen = TimeUtils.getRelativeTime(realtimeWhen, when.getTime());
-            String clockWhen = TimeUtils.getClockTime(realtimeWhen);
+            //String relativeWhen = TimeUtils.getRelativeTime(realtimeWhen, when.getTime());
+            //String clockWhen = TimeUtils.getClockTime(realtimeWhen);
 
             Stopover stopover = new Stopover(jsonStopover.getString("Id"),
                     jsonStopover.getString("Direction"),
                     line, stop, false, realtimeWhen,
                     plannedWhen, plannedWhen, delay, platform,
-                    null, null,
-                    relativeWhen,
-                    clockWhen, new ArrayList<>());
+                    null, null, new ArrayList<>());
             stopover.rawWhen = realtimeWhenRaw;
             stopovers.add(stopover);
         });
@@ -202,8 +201,10 @@ public class DvbProvider extends GeneralProvider {
                     new Location(address, address, 0, 0, 0), stopProducts, null, null, 0);
 
             Date time = new Date(parseDate(stopover.get("Time").toString()));
-            String relativeTime = TimeUtils.getRelativeTime(time, relativeDepartureTime.getTime());
-            String clockTime = TimeUtils.getClockTime(time);
+            Date realTime = time;
+            if (stopover.has("RealTime")) {
+                realTime = new Date(parseDate(stopover.get("RealTime").toString()));
+            }
 
             String platform;
             try {
@@ -212,8 +213,7 @@ public class DvbProvider extends GeneralProvider {
                 platform = "N/A";
             }
 
-            UpcomingStopover upcomingStopover = new UpcomingStopover(s, time, time, relativeTime,
-                    clockTime, 0, platform, platform, time, time, relativeTime, clockTime, 0,
+            UpcomingStopover upcomingStopover = new UpcomingStopover(s, realTime, time, 0, platform, platform, realTime, time, 0,
                     platform, platform);
             upcomingStopovers.add(upcomingStopover);
         });

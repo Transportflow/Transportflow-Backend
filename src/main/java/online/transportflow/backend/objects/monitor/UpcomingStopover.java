@@ -49,7 +49,7 @@ public class UpcomingStopover {
 
     }
 
-    public UpcomingStopover(Stop stop, Date departure, Date plannedDeparture, String relativeDeparture, String clockDeparture, double departureDelay, String departurePlatform, String plannedDeparturePlatform, Date arrival, Date plannedArrival, String relativeArrival, String clockArrival, double arrivalDelay, String arrivalPlatform, String plannedArrivalPlatform) {
+    public UpcomingStopover(Stop stop, Date departure, Date plannedDeparture, double departureDelay, String departurePlatform, String plannedDeparturePlatform, Date arrival, Date plannedArrival, double arrivalDelay, String arrivalPlatform, String plannedArrivalPlatform) {
         this.stop = stop;
         this.departure = departure;
         this.plannedDeparture = plannedDeparture;
