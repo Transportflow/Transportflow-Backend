@@ -38,11 +38,12 @@ public class Server {
     public static void main(String... args) {
         providers.add(new DbProvider(DbProvider.getProviderProducts()));
         providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
+        providers.add(new NahshProvider(NahshProvider.getProviderProducts()));
         providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
         providers.add(new VbbProvider(VbbProvider.getProviderProducts()));
         providers.add(new InsaProvider(InsaProvider.getProviderProducts()));
-        providers.add(new OebbProvider(OebbProvider.getProviderProducts()));
         providers.add(new RmvProvider(RmvProvider.getProviderProducts()));
+        providers.add(new OebbProvider(OebbProvider.getProviderProducts()));
 
         staticFiles.location("/public");
 
