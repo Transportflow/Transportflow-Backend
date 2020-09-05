@@ -44,6 +44,7 @@ public class Server {
         providers.add(new InsaProvider(InsaProvider.getProviderProducts()));
         providers.add(new RmvProvider(RmvProvider.getProviderProducts()));
         providers.add(new OebbProvider(OebbProvider.getProviderProducts()));
+        providers.add(new CflProvider(CflProvider.getProviderProducts()));
 
         staticFiles.location("/public");
 
