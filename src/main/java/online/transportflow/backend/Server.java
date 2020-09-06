@@ -39,6 +39,7 @@ public class Server {
         providers.add(new DbProvider(DbProvider.getProviderProducts()));
         providers.add(new DvbProvider(DvbProvider.getProviderProducts()));
         providers.add(new NahshProvider(NahshProvider.getProviderProducts()));
+        providers.add(new RsagProvider(RsagProvider.getProviderProducts()));
         providers.add(new BvgProvider(BvgProvider.getProviderProducts()));
         providers.add(new VbbProvider(VbbProvider.getProviderProducts()));
         providers.add(new InsaProvider(InsaProvider.getProviderProducts()));
