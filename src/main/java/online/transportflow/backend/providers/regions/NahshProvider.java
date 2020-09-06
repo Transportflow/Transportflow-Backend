@@ -29,7 +29,7 @@ public class NahshProvider extends HafasProvider {
         products.add(new Product("tram", "Tram", DefaultLogos.getTram()));
         products.add(new Product("ferry", "Fähre", DefaultLogos.getFerry()));
         products.add(new Product("subway", "U-Bahn", DefaultLogos.getSubway()));
-        products.add(new Product("onCall", "Anruf Taxi", DefaultLogos.getTaxi()));
+        products.add(new Product("onCall", "Anruf-Taxi", DefaultLogos.getTaxi()));
         return products;
     }
 }

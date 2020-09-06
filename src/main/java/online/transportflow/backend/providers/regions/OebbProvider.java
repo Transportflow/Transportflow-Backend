@@ -27,7 +27,7 @@ public class OebbProvider extends HafasProvider {
         products.add(new Product("suburban", "S-Bahn", DefaultLogos.getSuburban()));
         products.add(new Product("bus", "Bus", DefaultLogos.getBus()));
         products.add(new Product("ferry", "Fähre", DefaultLogos.getFerry()));
-        products.add(new Product("subway", "U-Bahn", DefaultLogos.getSubway()));
+        products.add(new Product("subway", "U-Bahn", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/U-Bahn_Wien.svg/1024px-U-Bahn_Wien.svg.png"));
         products.add(new Product("tram", "Tram", DefaultLogos.getTram()));
         products.add(new Product("onCall", "Anruftaxi", DefaultLogos.getTaxi()));
         return products;
