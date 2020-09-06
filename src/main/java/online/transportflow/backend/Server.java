@@ -46,6 +46,7 @@ public class Server {
         providers.add(new VmtProvider(VmtProvider.getProviderProducts()));
         providers.add(new RmvProvider(RmvProvider.getProviderProducts()));
         providers.add(new OebbProvider(OebbProvider.getProviderProducts()));
+        providers.add(new SncbProvider(SncbProvider.getProviderProducts()));
         providers.add(new CflProvider(CflProvider.getProviderProducts()));
 
         staticFiles.location("/public");
