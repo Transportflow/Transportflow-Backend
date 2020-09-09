@@ -21,15 +21,15 @@ public class RmvProvider extends HafasProvider {
 
     public static List<Product> getProviderProducts() {
         List<Product> products = new ArrayList<>();
-        products.add(new Product("express-train", "ICE", DefaultLogos.getInterCityExpress()));
-        products.add(new Product("long-distance-train", "IC/EC", DefaultLogos.getInterCity()));
-        products.add(new Product("regiona-train", "RE/RB", DefaultLogos.getRegional()));
-        products.add(new Product("s-bahn", "S-Bahn", DefaultLogos.getSuburban()));
-        products.add(new Product("u-bahn", "U-Bahn", DefaultLogos.getSubway()));
-        products.add(new Product("tram", "Straßenbahn", DefaultLogos.getTram()));
-        products.add(new Product("watercraft", "Fähre", DefaultLogos.getFerry()));
-        products.add(new Product("bus", "Bus", DefaultLogos.getBus()));
-        products.add(new Product("ast", "Anruf-Sammel-Taxi", DefaultLogos.getTaxi()));
+        products.add(new Product("express-train", "ICE", "https://www.rmv.de/auskunft/s/n/img/products/1_pic.png"));
+        products.add(new Product("long-distance-train", "IC/EC", "https://www.rmv.de/auskunft/s/n/img/products/2_pic.png"));
+        products.add(new Product("regiona-train", "RE/RB", "https://www.rmv.de/auskunft/s/n/img/products/4_pic.png"));
+        products.add(new Product("s-bahn", "S-Bahn", "https://www.rmv.de/auskunft/s/n/img/products/8_pic.png"));
+        products.add(new Product("u-bahn", "U-Bahn", "https://www.rmv.de/auskunft/s/n/img/products/16_pic.png"));
+        products.add(new Product("tram", "Straßenbahn", "https://www.rmv.de/auskunft/s/n/img/products/32_pic.png"));
+        products.add(new Product("watercraft", "Fähre", "https://www.rmv.de/auskunft/s/n/img/products/256_pic.png"));
+        products.add(new Product("bus", "Bus", "https://www.rmv.de/auskunft/s/n/img/products/64_pic.png"));
+        products.add(new Product("ast", "Anruf-Sammel-Taxi", "https://www.rmv.de/auskunft/s/n/img/products/512_pic.png"));
         products.add(new Product("cable-car", "Seilbahn", "https://www.dvb.de/assets/img/trans-icon/transport-lift.svg"));
         return products;
     }
