@@ -12,6 +12,8 @@ public class RmvProvider extends HafasProvider {
     public RmvProvider(List<Product> products) {
         super("https://rmv.transportflow.online",
                 "Rhein-Main (RMV)",
+                "Rhein-Main",
+                "RMV",
                 "de",
                 "https://images.unsplash.com/photo-1542344807-157f76301e8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3067&q=80",
                 "white",

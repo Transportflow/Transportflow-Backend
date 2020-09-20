@@ -11,6 +11,8 @@ public class NahshProvider extends HafasProvider {
     public NahshProvider(List<Product> products) {
         super("https://nahsh.transportflow.online",
                 "Schleswig-Holstein (NAHSH)",
+                "Schleswig-Holstein",
+                "NAHSH",
                 "de",
                 "https://images.unsplash.com/photo-1597231152034-dc2a622f7f83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
                 "black",

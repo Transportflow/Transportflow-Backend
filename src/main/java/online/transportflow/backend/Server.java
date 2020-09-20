@@ -215,7 +215,7 @@ public class Server {
             throw new Exception("Keine Region ausgewählt.");
         }
 
-        Provider provider = providers.stream().filter(p -> p.getRegionName().toLowerCase().equals(req.params("region").toLowerCase()))
+        Provider provider = providers.stream().filter(p -> p.getRegionName().toLowerCase().contains(req.params("region").toLowerCase()))
                 .findFirst().orElse(null);
 
         if (provider == null) {

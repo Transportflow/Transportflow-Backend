@@ -11,6 +11,8 @@ public class VmtProvider extends HafasProvider {
     public VmtProvider(List<Product> products) {
         super("https://vmt.transportflow.online",
                 "Thüringen (VMT)",
+                "Thüringen",
+                "VMT",
                 "de",
                 "https://images.unsplash.com/photo-1565618958134-92787e5d51ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
                 "white",

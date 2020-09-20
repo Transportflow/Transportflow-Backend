@@ -10,7 +10,9 @@ import java.util.List;
 public class DbProvider extends HafasProvider {
     public DbProvider(List<Product> products) {
         super("https://db.transportflow.online",
+                "Deutsche Bahn (DB)",
                 "Deutsche Bahn",
+                "DB",
                 "de",
                 "https://images.unsplash.com/photo-1586718252210-03428225427a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80",
                 "white",

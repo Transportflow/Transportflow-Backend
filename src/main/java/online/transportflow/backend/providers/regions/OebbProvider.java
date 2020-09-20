@@ -11,6 +11,8 @@ public class OebbProvider extends HafasProvider {
     public OebbProvider(List<Product> products) {
         super("https://oebb.transportflow.online",
                 "Österreich (ÖBB)",
+                "Österreich",
+                "ÖBB",
                 "de",
                 "https://images.unsplash.com/photo-1581458701105-93b74f5066a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
                 "white",

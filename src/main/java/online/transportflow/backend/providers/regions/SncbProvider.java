@@ -11,6 +11,8 @@ public class SncbProvider extends HafasProvider {
     public SncbProvider(List<Product> products) {
         super("https://sncb.transportflow.online",
                 "Belgien (SNCB)",
+                "Belgien",
+                "SNCB",
                 "de",
                 "https://images.unsplash.com/photo-1592758079583-fcf6ede7360c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1262&q=80",
                 "black",

@@ -29,6 +29,8 @@ public class DvbProvider extends GeneralProvider {
     public DvbProvider(List<Product> products) {
         super("https://webapi.vvo-online.de",
                 "Dresden (VVO)",
+                "Dresden",
+                "VVO",
                 "de",
                 "https://images.unsplash.com/photo-1589381765173-8b3db2043022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
                 "white",

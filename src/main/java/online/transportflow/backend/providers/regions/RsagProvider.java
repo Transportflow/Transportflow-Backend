@@ -11,6 +11,8 @@ public class RsagProvider extends HafasProvider {
     public RsagProvider(List<Product> products) {
         super("https://rsag.transportflow.online",
                 "Rostock (RSAG)",
+                "Rostock",
+                "RSAG",
                 "de",
                 "https://images.unsplash.com/photo-1566333447602-d814291b97dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
                 "white",

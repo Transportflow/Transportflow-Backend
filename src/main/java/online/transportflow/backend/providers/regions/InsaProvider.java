@@ -11,6 +11,8 @@ public class InsaProvider extends HafasProvider {
     public InsaProvider(List<Product> products) {
         super("https://insa.transportflow.online",
                 "Sachsen-Anhalt (INSA)",
+                "Sachsen-Anhalt",
+                "INSA",
                 "de",
                 "https://images.unsplash.com/photo-1569663950244-5f2616a977a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
                 "white",

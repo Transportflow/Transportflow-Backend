@@ -15,6 +15,11 @@ public class GeneralProvider implements Provider {
     public String baseUrl;
     @Expose(serialize = true)
     public String regionName;
+    @Expose(serialize = true)
+    public String region;
+    @Expose(serialize = true)
+    public String provider;
+
     public String language;
     @Expose(serialize = true)
     public String image;
@@ -29,9 +34,11 @@ public class GeneralProvider implements Provider {
     @Expose(serialize = false)
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
 
-    public GeneralProvider(String baseUrl, String regionName, String language, String image, String textColor, List<Product> products) {
+    public GeneralProvider(String baseUrl, String regionName, String region, String provider, String language, String image, String textColor, List<Product> products) {
         this.baseUrl = baseUrl;
         this.regionName = regionName;
+        this.region = region;
+        this.provider = provider;
         this.textColor = textColor;
         this.products = products;
         this.image = image;

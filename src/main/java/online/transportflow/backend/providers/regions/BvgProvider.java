@@ -11,6 +11,8 @@ public class BvgProvider extends HafasProvider {
     public BvgProvider(List<Product> products) {
         super("https://bvg.transportflow.online",
                 "Berlin (BVG)",
+                "Berlin",
+                "BVG",
                 "de",
                 "https://images.unsplash.com/photo-1572083272166-b2a0855fcbb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
                 "white",

@@ -20,8 +20,8 @@ import java.util.Date;
 import java.util.List;
 
 public class HafasProvider extends GeneralProvider {
-    public HafasProvider(String baseUrl, String regionName, String language, String image, String textColor, List<Product> products) {
-        super(baseUrl, regionName, language, image, textColor, products);
+    public HafasProvider(String baseUrl, String regionName, String region, String provider, String language, String image, String textColor, List<Product> products) {
+        super(baseUrl, regionName, region, provider, language, image, textColor, products);
     }
 
     @Override

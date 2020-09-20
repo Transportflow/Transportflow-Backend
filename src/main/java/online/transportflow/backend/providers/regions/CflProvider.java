@@ -11,6 +11,8 @@ public class CflProvider extends HafasProvider {
     public CflProvider(List<Product> products) {
         super("https://cfl.transportflow.online",
                 "Luxemburg (CFL)",
+                "Luxemburg",
+                "CFL",
                 "de",
                 "https://images.unsplash.com/photo-1570450356884-f45a7075b17f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
                 "white",
