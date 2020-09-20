@@ -84,7 +84,7 @@ public class DvbProvider extends GeneralProvider {
             });
             return finalStops;
         } catch (Exception e) {
-            return null;
+            return new ArrayList<>();
         }
     }
 
