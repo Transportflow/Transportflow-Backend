@@ -47,15 +47,15 @@ public class DvbProvider extends GeneralProvider {
         products.add(new Product("Cableway", "Seil-/Schwebebahn", "https://www.dvb.de/assets/img/trans-icon/transport-lift.svg"));
         products.add(new Product("Ferry", "Fähre", DefaultLogos.getFerry()));
         products.add(new Product("HailedSharedTaxi", "Anrufsammeltaxi (AST)/ Rufbus", DefaultLogos.getTaxi()));
-        products.add(new Product("Footpath", "Fussweg", "https://m.dvb.de/img/walk.svg"));
-        products.add(new Product("StairsUp", "Treppe aufwärts", "https://m.dvb.de/img/stairs-up.svg"));
-        products.add(new Product("StairsDown", "Treppe abwärts", "https://m.dvb.de/img/stairs-down.svg"));
-        products.add(new Product("EscalatorUp", "Rolltreppe aufwärts", "https://m.dvb.de/img/escalator-up.svg"));
-        products.add(new Product("EscalatorDown", "Rolltreppe abwärts", "https://m.dvb.de/img/escalator-down.svg"));
-        products.add(new Product("ElevatorUp", "Fahrstuhl aufwärts", "https://m.dvb.de/img/elevator-up.svg"));
-        products.add(new Product("ElevatorDown", "Fahrstuhl abwärts", "https://m.dvb.de/img/elevator-down.svg"));
-        products.add(new Product("StayForConnection", "gesicherter Anschluss", "https://m.dvb.de/img/sit.svg"));
-        products.add(new Product("PlusBus", "PlusBus", "https://m.dvb.de/img/mot_icons/plusBus.svg"));
+        products.add(new Product("Footpath", "Fussweg", "https://www.dvb.de/assets/img/trans-icon/walk.svg"));
+        products.add(new Product("StairsUp", "Treppe aufwärts", "https://www.dvb.de/assets/img/trans-icon/stairs-up.svg"));
+        products.add(new Product("StairsDown", "Treppe abwärts", "https://www.dvb.de/assets/img/trans-icon/stairs-down.svg"));
+        products.add(new Product("EscalatorUp", "Rolltreppe aufwärts", "https://www.dvb.de/assets/img/trans-icon/escalator-up.svg"));
+        products.add(new Product("EscalatorDown", "Rolltreppe abwärts", "https://www.dvb.de/assets/img/trans-icon/escalator-down.svg"));
+        products.add(new Product("ElevatorUp", "Fahrstuhl aufwärts", "https://www.dvb.de/assets/img/trans-icon/elevator-up.svg"));
+        products.add(new Product("ElevatorDown", "Fahrstuhl abwärts", "https://www.dvb.de/assets/img/trans-icon/elevator-down.svg"));
+        products.add(new Product("StayForConnection", "gesicherter Anschluss", "https://www.dvb.de/assets/img/trans-icon/sit.svg"));
+        products.add(new Product("PlusBus", "PlusBus", "https://www.dvb.de/assets/img/trans-icon/transport-plusbus.svg"));
         return products;
     }
 
