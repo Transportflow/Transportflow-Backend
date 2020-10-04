@@ -107,7 +107,8 @@ public class Server {
                 return null;
 
             res.type("application/json");
-            return "{region: \"" + provider.getRegionName() + "\", products:" + new Gson().toJson(provider.getProducts()) + "}";
+            return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(provider);
+            //return "{region: \"" + provider.getRegionName() + "\", products:" + new Gson().toJson(provider.getProducts()) + "}";
         });
 
         get("/:region/locations", (req, res) -> {
