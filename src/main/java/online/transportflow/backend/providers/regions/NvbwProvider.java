@@ -1,8 +1,6 @@
 package online.transportflow.backend.providers.regions;
 
-import de.schildbach.pte.dto.Location;
-import de.schildbach.pte.dto.LocationType;
-import de.schildbach.pte.dto.SuggestLocationsResult;
+import de.schildbach.pte.dto.*;
 import online.transportflow.backend.objects.Product;
 import online.transportflow.backend.objects.location.Stop;
 import online.transportflow.backend.objects.monitor.Monitor;
@@ -32,15 +30,15 @@ public class NvbwProvider extends PteProvider {
     @Override
     public List<Stop> searchLocation(String query, int results, boolean stops, boolean addresses, boolean poi) {
         try {
-            SuggestLocationsResult res = NvBwProvider.suggestLocations(query, Set.of(LocationType.STATION), results);
+            SuggestLocationsResult res = this.NvBwProvider.suggestLocations(query, Set.of(LocationType.STATION), results);
 
             List<Stop> stopResult = new ArrayList<>();
             for (Location l : res.getLocations()) {
-                stopResult.add(new Stop(l.id, l.name + ", " + l.place, PteLocationToTransportflow(l), l.products != null ? PteProductsToTransportflow(l.products) : new ArrayList<>(), null, null, 0));
+                stopResult.add(PteProvider.PteStopLocationToTransportflow(l));
             }
 
             return stopResult;
-        } catch (IOException e) {
+        } catch (IOException | IllegalStateException e) {
             return new ArrayList<>();
         }
     }
@@ -52,7 +50,18 @@ public class NvbwProvider extends PteProvider {
 
     @Override
     public Monitor getDepartures(String stopId, Date when, int duration) throws Exception {
-        return super.getDepartures(stopId, when, duration);
+        try {
+            QueryDeparturesResult r = this.NvBwProvider.queryDepartures(stopId, null, duration, true);
+
+            if (r.stationDepartures.size() < 1) {
+                return null;
+            }
+            StationDepartures dep = r.stationDepartures.get(0);
+
+            return new Monitor(PteProvider.PteStopLocationToTransportflow(dep.location), PteProvider.PteDeparturesToTransportflow(dep.departures, dep.location));
+        } catch (IOException | IllegalStateException e) {
+            return null;
+        }
     }
 
     @Override
