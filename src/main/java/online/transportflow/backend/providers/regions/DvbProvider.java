@@ -91,7 +91,7 @@ public class DvbProvider extends GeneralProvider {
     @Override
     public List<Stop> searchLocation(double lat, double lng, int radius, int results, boolean stops, boolean poi) {
         //TODO: Optimise!!!!!
-        HttpResponse<JsonNode> response = Unirest.get("http://cloud.adwira.wien:7826/toGK4?lat=" + lat + "&lng=" + lng)
+        HttpResponse<JsonNode> response = Unirest.get("http://159.69.125.32:7826/toGK4?lat=" + lat + "&lng=" + lng)
                 .asJson();
         JSONObject res = response.getBody().getObject();
         return searchLocation("coord:" + res.get("x").toString().replaceAll("(\\.[^<]+)", "")
